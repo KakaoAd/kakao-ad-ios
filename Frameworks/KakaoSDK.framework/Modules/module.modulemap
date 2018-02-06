@@ -1,6 +1,0 @@
-framework module KakaoSDK {
-  umbrella header "KakaoSDK.h"
-
-  export *
-  module * { export * }
-}

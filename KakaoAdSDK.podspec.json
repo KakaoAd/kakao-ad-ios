@@ -1,8 +1,8 @@
 {
-  "authors": "Kakao Ad",
-  "description": "Kakao SDK for iOS",
-  "version": "0.3.2",
-  "homepage": "https://github.com/KakaoAd/kakao-pixel-ios.git",
+  "authors": "KakaoAd",
+  "description": "KakaoAd SDK for iOS",
+  "version": "0.3.5",
+  "homepage": "https://github.com/KakaoAd/kakao-ad-ios.git",
   "license": {
     "type": "Copyright",
     "text": "Copyright (c) Kakao corp. All rights reserved."
@@ -12,10 +12,10 @@
     "ios": "9.0"
   },
   "source": {
-    "git": "https://github.com/KakaoAd/kakao-pixel-ios.git",
-    "tag": "0.3.2"
+    "git": "https://github.com/KakaoAd/kakao-ad-ios.git",
+    "tag": "0.3.5"
   },
   "preserve_paths": "Frameworks/*.framework",
-  "vendored_frameworks": "Frameworks/KakaoSDK.framework",
-  "summary": "Kakao Ad SDK"
+  "vendored_frameworks": "Frameworks/KakaoAdSDK.framework",
+  "summary": "KakaoAd SDK"
 }

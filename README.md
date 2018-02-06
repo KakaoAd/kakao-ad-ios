@@ -1,6 +1,6 @@
-# **Kakao SDK**
+# **KakaoAd SDK**
 
-> 이 [가이드](https://kakaoad.github.io/kakao-pixel-ios/)는 iOS Application 에 이벤트 수집을 위한 가이드를 제공하고 있습니다. 
+> 이 [가이드](https://kakaoad.github.io/kakao-ad-ios/)는 iOS Application 에 이벤트 수집을 위한 가이드를 제공하고 있습니다. 
 
 ## 소개
  - iOS 어플리케이션에서 다음과 같은 이벤트를 수집하고 전송하고 있습니다. 수집된 데이터를 이용하여 다양한 목적으로 활용할 수 있습니다. 
@@ -12,7 +12,7 @@
 
 ## API Doc
 
- - [https://kakaoad.github.io/kakao-pixel-ios/](https://kakaoad.github.io/kakao-pixel-ios/)
+ - [https://kakaoad.github.io/kakao-ad-ios/](https://kakaoad.github.io/kakao-ad-ios/)
     위 사이트에서 확인 할 수 있습니다. 
 
 ## 지원환경 
