@@ -1,7 +1,7 @@
 {
   "authors": "KakaoAd",
   "description": "KakaoAd SDK for iOS",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "homepage": "https://github.com/KakaoAd/kakao-ad-ios.git",
   "license": {
     "type": "Copyright",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/KakaoAd/kakao-ad-ios.git",
-    "tag": "0.3.7"
+    "tag": "0.3.8"
   },
   "preserve_paths": "Frameworks/*.framework",
   "vendored_frameworks": "Frameworks/KakaoAdSDK.framework",
