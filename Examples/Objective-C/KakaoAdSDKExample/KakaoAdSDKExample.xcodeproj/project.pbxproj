@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2484E5320298B150072ED65 /* KakaoAdSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C2484E5220298B150072ED65 /* KakaoAdSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C27A8B31204D45DC0032D20C /* KakaoAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27A8B2F204D45CA0032D20C /* KakaoAdSDK.framework */; };
+		C27A8B32204D45DC0032D20C /* KakaoAdSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C27A8B2F204D45CA0032D20C /* KakaoAdSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C2B31B821FDFB6EA00094B4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31B811FDFB6EA00094B4A /* AppDelegate.m */; };
 		C2B31B851FDFB6EA00094B4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31B841FDFB6EA00094B4A /* ViewController.m */; };
 		C2B31B881FDFB6EA00094B4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B31B861FDFB6EA00094B4A /* Main.storyboard */; };
@@ -23,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C2484E5320298B150072ED65 /* KakaoAdSDK.framework in Embed Frameworks */,
+				C27A8B32204D45DC0032D20C /* KakaoAdSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,7 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C2484E5220298B150072ED65 /* KakaoAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoAdSDK.framework; path = "../../../Objective-C/KakaoAdSDKExample/Frameworks/KakaoAdSDK.framework"; sourceTree = "<group>"; };
+		C27A8B2F204D45CA0032D20C /* KakaoAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoAdSDK.framework; sourceTree = "<group>"; };
 		C2B31B7D1FDFB6EA00094B4A /* KakaoAdSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoAdSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B31B801FDFB6EA00094B4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2B31B811FDFB6EA00094B4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,18 +50,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27A8B31204D45DC0032D20C /* KakaoAdSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C27A8B2E204D45CA0032D20C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C27A8B2F204D45CA0032D20C /* KakaoAdSDK.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		C2B31B741FDFB6EA00094B4A = {
 			isa = PBXGroup;
 			children = (
+				C27A8B2E204D45CA0032D20C /* Frameworks */,
 				C2B31B7F1FDFB6EA00094B4A /* KakaoAdSDKExample */,
 				C2B31B7E1FDFB6EA00094B4A /* Products */,
-				C2B31B961FDFB89E00094B4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,15 +96,6 @@
 				C2B31B8F1FDFB6EA00094B4A /* main.m */,
 			);
 			path = KakaoAdSDKExample;
-			sourceTree = "<group>";
-		};
-		C2B31B961FDFB89E00094B4A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C2484E5220298B150072ED65 /* KakaoAdSDK.framework */,
-			);
-			name = Frameworks;
-			path = ../../Swift/KakaoChipExample/Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
