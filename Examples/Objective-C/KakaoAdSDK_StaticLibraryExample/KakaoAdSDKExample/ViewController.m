@@ -27,6 +27,12 @@
     // 장바구니 보기
     [KakaoAdTracker sendViewCartEventWithTag:tag];
     
+    // 잠재고객
+    [KakaoAdTracker sendParticipationEventWithTag:tag];
+    
+    // 가입 및 등록
+    [KakaoAdTracker sendSignUpEventWithTag:tag];
+    
     // 콘텐츠/상품 조회
     NSString* contentId = @"contentId";
     [KakaoAdTracker sendViewContentEventWithTag:tag contentId:contentId];

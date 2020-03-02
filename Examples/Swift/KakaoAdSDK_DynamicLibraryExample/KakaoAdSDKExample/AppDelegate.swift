@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        KakaoAdTracker.trackId = "Input Your Track ID"
+        KakaoAdTracker.trackId = "7519224474981058974"
         return true
     }
 

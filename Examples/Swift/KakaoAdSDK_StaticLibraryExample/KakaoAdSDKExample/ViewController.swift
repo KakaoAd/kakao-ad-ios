@@ -23,6 +23,12 @@ class ViewController: UIViewController {
         // 장바구니 보기
         KakaoAdTracker.sendViewCartEvent(tag: tag)
         
+        // 잠재고객
+        KakaoAdTracker.sendParticipationEvent(tag: tag)
+        
+        // 가입 및 등록
+        KakaoAdTracker.sendSignUpEvent(tag: tag)
+        
         // 콘텐츠/상품 조회
         let contentId = "contentId"
         KakaoAdTracker.sendViewContentEvent(tag: tag, contentId:contentId)

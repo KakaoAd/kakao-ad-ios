@@ -75,4 +75,16 @@
                       currency:(NSString*)currency
                       products:(NSArray*)products NS_SWIFT_NAME(sendInAppPurchaseEvent(tag:totalQuantity:totalPrice:currency:products:));
 
+/**
+ 잠재고객 이벤트
+ @param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.
+ */
++ (void)sendParticipationEventWithTag:(NSString*)tag NS_SWIFT_NAME(sendParticipationEvent(tag:));
+
+/**
+ 가입 및 등록 이벤트
+ @param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.
+ */
++ (void)sendSignUpEventWithTag:(NSString*)tag NS_SWIFT_NAME(sendSignUpEvent(tag:));
+
 @end
