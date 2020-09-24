@@ -89,6 +89,12 @@
           <li class="nav-group-task">
             <a class="nav-group-task-link" href="../send-signup-event.html">Send SignUp Event</a>
           </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="../send-add-to-cart-event.html">Send Add To Cart Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="../send-add-to-wishlist-event.html">Send Add To Wishlist Event</a>
+          </li>
         </ul>
       </li>
       <li class="nav-group-name">
@@ -120,7 +126,7 @@
             </div>
           </div>
         <p>이벤트 수집을 위한 기본 클래스
-설치, 실행, 가입 완료, 장바구니 보기, 검색, 구매, 앱내 구매에 대한 이벤트를 이벤트 수집서버로 전송할 수 있습니다.
+설치, 실행, 회원가입, 장바구니 보기, 검색, 구매, 앱내 구매에 대한 이벤트를 이벤트 수집서버로 전송할 수 있습니다.
 설치, 실행, 앱내 구매에 대한 이벤트는 이벤트 발생시 자동으로 이벤트 서버로 이벤트가 전송 됩니다.</p>
 
       </div>
@@ -151,7 +157,7 @@ trackId 를 설정하지 않을 경우 이벤트 수집은 이루어지지 않�
                     <h4>Declaration</h4>
                     <div class="language">
                       <p class="aside-title">Objective-C</p>
-                      <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">trackId</span><span class="p">;</span></code></pre>
+                      <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">trackId</span><span class="p">;</span></code></pre>
 
                     </div>
                     <div class="language">
@@ -259,7 +265,7 @@ trackId 를 설정하지 않을 경우 이벤트 수집은 이루어지지 않�
                 <section class="section">
                   <div class="pointer"></div>
                   <div class="abstract">
-                    <p>가입 완료 이벤트</p>
+                    <p>회원가입 이벤트</p>
 
                   </div>
                   <div class="declaration">
@@ -695,7 +701,7 @@ trackId 를 설정하지 않을 경우 이벤트 수집은 이루어지지 않�
                 <section class="section">
                   <div class="pointer"></div>
                   <div class="abstract">
-                    <p>가입 및 등록 이벤트</p>
+                    <p>서비스신청 이벤트</p>
 
                   </div>
                   <div class="declaration">
@@ -724,6 +730,134 @@ trackId 를 설정하지 않을 경우 이벤트 수집은 이루어지지 않�
                           <td>
                             <div>
                               <p>tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.</p>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <code>
+                <a name="/c:objc(cs)KakaoAdTracker(cm)sendAddToCartEventWithTag:contentId:"></a>
+                <a name="//apple_ref/objc/Method/+sendAddToCartEventWithTag:contentId:" class="dashAnchor"></a>
+                <a class="token" href="#/c:objc(cs)KakaoAdTracker(cm)sendAddToCartEventWithTag:contentId:">+sendAddToCartEventWithTag:contentId:</a>
+                </code>
+              </div>
+              <div class="height-container">
+                <div class="pointer-container"></div>
+                <section class="section">
+                  <div class="pointer"></div>
+                  <div class="abstract">
+                    <p>장바구니 추가 이벤트</p>
+
+                  </div>
+                  <div class="declaration">
+                    <h4>Declaration</h4>
+                    <div class="language">
+                      <p class="aside-title">Objective-C</p>
+                      <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendAddToCartEventWithTag</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">tag</span>
+                        <span class="nf">contentId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">contentId</span><span class="p">;</span></code></pre>
+
+                    </div>
+                    <div class="language">
+                      <p class="aside-title">Swift</p>
+                      <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sendAddToCartEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                    </div>
+                  </div>
+                  <div>
+                    <h4>Parameters</h4>
+                    <table class="graybox">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <code>
+                            <em>tag</em>
+                            </code>
+                          </td>
+                          <td>
+                            <div>
+                              <p>tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.</p>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>
+                            <em>contentId</em>
+                            </code>
+                          </td>
+                          <td>
+                            <div>
+                              <p>콘텐츠/상품 코드</p>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <code>
+                <a name="/c:objc(cs)KakaoAdTracker(cm)sendAddToWishListEventWithTag:contentId:"></a>
+                <a name="//apple_ref/objc/Method/+sendAddToWishListEventWithTag:contentId:" class="dashAnchor"></a>
+                <a class="token" href="#/c:objc(cs)KakaoAdTracker(cm)sendAddToWishListEventWithTag:contentId:">+sendAddToWishListEventWithTag:contentId:</a>
+                </code>
+              </div>
+              <div class="height-container">
+                <div class="pointer-container"></div>
+                <section class="section">
+                  <div class="pointer"></div>
+                  <div class="abstract">
+                    <p>관심상품 추가 이벤트</p>
+
+                  </div>
+                  <div class="declaration">
+                    <h4>Declaration</h4>
+                    <div class="language">
+                      <p class="aside-title">Objective-C</p>
+                      <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendAddToWishListEventWithTag</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">tag</span>
+                            <span class="nf">contentId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">contentId</span><span class="p">;</span></code></pre>
+
+                    </div>
+                    <div class="language">
+                      <p class="aside-title">Swift</p>
+                      <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sendAddToWishListEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                    </div>
+                  </div>
+                  <div>
+                    <h4>Parameters</h4>
+                    <table class="graybox">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <code>
+                            <em>tag</em>
+                            </code>
+                          </td>
+                          <td>
+                            <div>
+                              <p>tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.</p>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>
+                            <em>contentId</em>
+                            </code>
+                          </td>
+                          <td>
+                            <div>
+                              <p>콘텐츠/상품 코드</p>
                             </div>
                           </td>
                         </tr>

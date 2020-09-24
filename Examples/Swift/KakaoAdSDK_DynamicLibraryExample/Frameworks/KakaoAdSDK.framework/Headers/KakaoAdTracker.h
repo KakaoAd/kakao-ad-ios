@@ -12,7 +12,7 @@
 
 /**
  이벤트 수집을 위한 기본 클래스
- 설치, 실행, 가입 완료, 장바구니 보기, 검색, 구매, 앱내 구매에 대한 이벤트를 이벤트 수집서버로 전송할 수 있습니다.
+ 설치, 실행, 회원가입, 장바구니 보기, 검색, 구매, 앱내 구매에 대한 이벤트를 이벤트 수집서버로 전송할 수 있습니다.
  설치, 실행, 앱내 구매에 대한 이벤트는 이벤트 발생시 자동으로 이벤트 서버로 이벤트가 전송 됩니다.
  */
 @interface KakaoAdTracker : NSObject
@@ -32,7 +32,7 @@
  */
 + (void)sendViewCartEventWithTag:(NSString*)tag NS_SWIFT_NAME(sendViewCartEvent(tag:));
 /**
- 가입 완료 이벤트
+ 회원가입 이벤트
  @param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.
  */
 + (void)sendCompleteRegisterEventWithTag:(NSString*)tag NS_SWIFT_NAME(sendCompleteRegisterEvent(tag:));
@@ -82,9 +82,23 @@
 + (void)sendParticipationEventWithTag:(NSString*)tag NS_SWIFT_NAME(sendParticipationEvent(tag:));
 
 /**
- 가입 및 등록 이벤트
+ 서비스신청 이벤트
  @param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.
  */
 + (void)sendSignUpEventWithTag:(NSString*)tag NS_SWIFT_NAME(sendSignUpEvent(tag:));
+
+/**
+ 장바구니 추가 이벤트
+ @param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.
+ @param contentId 콘텐츠/상품 코드
+ */
++ (void)sendAddToCartEventWithTag:(NSString*)tag contentId:(NSString*)contentId NS_SWIFT_NAME(sendAddToCartEvent(tag:contentId:));
+
+/**
+ 관심상품 추가 이벤트
+ @param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.
+ @param contentId 콘텐츠/상품 코드
+ */
++ (void)sendAddToWishListEventWithTag:(NSString*)tag contentId:(NSString*)contentId NS_SWIFT_NAME(sendAddToWishListEvent(tag:contentId:));
 
 @end

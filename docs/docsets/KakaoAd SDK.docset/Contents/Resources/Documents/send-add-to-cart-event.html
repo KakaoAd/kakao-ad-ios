@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Install SDK  Reference</title>
+  <title>Send Add To Cart Event  Reference</title>
   <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
   <link rel="stylesheet" type="text/css" href="css/highlight.css" />
   <link rel="stylesheet" type="text/css" href="css/adfit-custom.css" />
@@ -17,7 +17,7 @@
 <body>
 
 
-<a title="Install SDK  Reference"></a>
+<a title="Send Add To Cart Event  Reference"></a>
 
 <header class="header">
   <p class="header-col header-col--primary">
@@ -45,7 +45,7 @@
 <p class="breadcrumbs">
   <a class="breadcrumb" href="index.html">KakaoAd SDK</a>
   <img class="carat" src="img/carat.png" />
-  <span class="doc_title">Install SDK</span> 
+  <span class="doc_title">Send Add To Cart Event</span> 
 </p>
 
 <div class="content-wrapper">
@@ -117,52 +117,30 @@
     <section class="section">
       <div class="section-content">
         
-        <h2 id='sdk-설치하기' class='heading'>SDK 설치하기</h2>
-<h3 id='1-cocoapods-사용하여-설치' class='heading'>1) Cocoapods 사용하여 설치</h3>
+        <h2 id='장바구니-추가-이벤트-전송' class='heading'>장바구니 추가 이벤트 전송</h2>
 
 <ul>
-<li>프로젝트의 Podfile에 <code>pod &#39;KakaoAdSDK&#39;</code> 를 추가합니다.</li>
-<li>터미널에서 <code>pod install</code> 명령을 실행합니다.</li>
+<li><strong>Parameter</strong> <strong><strong><em>tag</em></strong></strong>: 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가 합니다.</li>
+<li><strong>Parameter</strong> <strong><strong><em>contentId</em></strong></strong>: 콘텐츠 / 상품 코드 (필수값)</li>
 </ul>
-<h3 id='2-수동-설치-dynamic-framework' class='heading'>2) 수동 설치 (Dynamic Framework)</h3>
 
-<ul>
-<li>Framework/Dynamic/KakaoAdSDK를 다운로드 받습니다.</li>
-<li><code>KakaoAdSDK.framework</code>을 앱 프로젝트의 <code>General &gt; Embeded Binaries</code> 항목으로 끌어서 놓습니다.</li>
-</ul>
-<h3 id='3-수동-설치-static-framework' class='heading'>3) 수동 설치 (Static Framework)</h3>
+<h5 class="tab-title" data-tab-name="add-to-cart-request">Objective-C</h5>
+<pre class="highlight objective_c"><code>
+<span class="n">NSString</span><span class="o">*</span> <span class="n">tag</span> <span class="o">=</span> <span class="s">@"tag"</span><span class="p">;</span>
+<span class="n">NSString</span><span class="o">*</span> <span class="n">contentId</span> <span class="o">=</span> <span class="s">@"contentId"</span><span class="p">;</span>
 
-<ul>
-<li>Framework/Static/KakaoAdSDK를 다운로드 받습니다.</li>
-<li><code>KakaoAdSDK.framework</code>을 앱 프로젝트의 <code>General &gt; Linked Frameworks and Libraries</code> 항목으로 끌어서 놓습니다.</li>
-<li><code>Build Settings &gt; Linking &gt; Other Linker Flags</code> 항목에 <code>-ObjC</code>, <code>-all_load</code> 문자열을 설정합니다.</li>
-</ul>
-<h3 id='앱스토어에-앱-업로드-시-strong-unsupported-architectures-strong-에러-또는' class='heading'>앱스토어에 앱 업로드 시 <strong>Unsupported Architectures</strong> 에러 또는</h3>
-<h3 id='strong-failed-to-verify-bitcode-strong-에러가-발생하는-경우' class='heading'><strong>Failed to verify bitcode:</strong> 에러가 발생하는 경우</h3>
+<span class="p">[</span><span class="n">KakaoAdTracker</span> <span class="nf">sendAddToCartEventWithTag</span><span class="p">:</span><span class="n">tag</span> <span class="nf">contentId</span><span class="p">:</span><span class="n">contentId</span><span class="p">];</span>
 
-<p>KakaoAdSDK는 개발 편의를 위해 시뮬레이터용 / 실기기용 바이너리가 하나로 합쳐진 fat binary 형태로 제공됩니다.<br>
-따라서 KakaoAdSDK를 수동으로 설치한 경우, 앱스토어에 앱을 업로드 할 때 <code>Unsupported Architectures</code> 에러가 발생할 수 있습니다.<br>
-이러한 경우 다음의 안내를 따라주세요.</p>
-
-<ul>
-<li>Xcode에서 앱 프로젝트를 선택하고, <code>Build Phases</code> 탭으로 이동합니다.</li>
-<li>메인 영역 좌측 상단의 <code>+</code> 버튼을 클릭 후 <code>New Run Script Phase</code> 항목을 선택합니다.</li>
-<li>추가된 <code>Run Script</code> 항목의 입력 폼에 다음 코드를 복사해서 붙여넣습니다.</li>
-</ul>
-<pre class="highlight plaintext"><code>bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/KakaoAdSDK.framework/strip-frameworks.sh"
-</code></pre>
-<h3 id='ad-hoc-또는-enterprise-배포시-rebuild-from-bitcode-옵션이-체크-되었을때-에러가-발생하는-경우' class='heading'>ad-hoc 또는 enterprise 배포시 Rebuild from Bitcode 옵션이 체크 되었을때 에러가 발생하는 경우</h3>
-
-<p>Xcode 9.0 의 known Issues 로 아래와 같습니다. </p>
-<pre class="highlight plaintext"><code>When exporting an ad-hoc or enterprise IPA, Swift symbol stripping requires enabling app thinning or Rebuild from Bitcode. For more information, see Distribution options in Xcode Help. (31737836)
-Workaround: Enable app thinning or Rebuild from Bitcode when exporting the app. 
 </code></pre>
 
-<p><a href="https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876">참고사이트</a></p>
+<h5 class="tab-title" data-tab-name="add-to-cart-request">Swift</h5>
+<pre class="highlight swift"><code>
+<span class="k">let</span> <span class="nv">tag</span> <span class="o">=</span> <span class="s">"tag"</span>
+<span class="k">let</span> <span class="nv">contentId</span> <span class="o">=</span> <span class="s">"contentId"</span>
 
-<ul>
-<li>Rebuild from Bitcode 옵션 체크를 해제하고 진행 하는것으로 이슈를 회피 할 수 있습니다.</li>
-</ul>
+<span class="kt">KakaoAdTracker</span><span class="o">.</span><span class="nf">sendAddToCartEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="n">tag</span><span class="p">,</span> <span class="nv">contentId</span><span class="p">:</span><span class="n">contentId</span><span class="p">)</span>
+
+</code></pre>
 
       </div>
     </section>
