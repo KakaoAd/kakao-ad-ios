@@ -11,7 +11,5 @@
 FOUNDATION_EXPORT double KakaoAdSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char KakaoAdSDKVersionString[];
 
-#import "KakaoAdTracker.h"
-#import "KakaoAdDetailProduct.h"
 
 

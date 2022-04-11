@@ -4,3 +4,8 @@ framework module KakaoAdSDK {
   export *
   module * { export * }
 }
+
+module KakaoAdSDK.Swift {
+    header "KakaoAdSDK-Swift.h"
+    requires objc
+}

@@ -20,6 +20,7 @@
 ## 지원환경 
 * [최신 버전의 Xcode](https://developer.apple.com/xcode/)
 * iOS Deployment Target: iOS 9.0 이상
+* SPM 지원 (https://github.com/KakaoAd/KakaoAdPackage.git)
 
 ## License
 

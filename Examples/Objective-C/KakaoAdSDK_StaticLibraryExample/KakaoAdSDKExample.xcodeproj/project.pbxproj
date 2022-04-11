@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C20FE44F2225285600585CAA /* KakaoAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27A8B2F204D45CA0032D20C /* KakaoAdSDK.framework */; };
+		C264E46F2803B77500FDE0C1 /* KakaoAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27A8B2F204D45CA0032D20C /* KakaoAdSDK.framework */; };
+		C264E4702803B77500FDE0C1 /* KakaoAdSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C27A8B2F204D45CA0032D20C /* KakaoAdSDK.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C264E4782803B90900FDE0C1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264E4772803B90900FDE0C1 /* File.swift */; };
 		C2B31B821FDFB6EA00094B4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31B811FDFB6EA00094B4A /* AppDelegate.m */; };
 		C2B31B851FDFB6EA00094B4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31B841FDFB6EA00094B4A /* ViewController.m */; };
 		C2B31B881FDFB6EA00094B4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B31B861FDFB6EA00094B4A /* Main.storyboard */; };
@@ -23,6 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C264E4702803B77500FDE0C1 /* KakaoAdSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,6 +33,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C264E4762803B90900FDE0C1 /* KakaoAdSDKExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KakaoAdSDKExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		C264E4772803B90900FDE0C1 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C27A8B2F204D45CA0032D20C /* KakaoAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoAdSDK.framework; sourceTree = "<group>"; };
 		C2B31B7D1FDFB6EA00094B4A /* KakaoAdSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoAdSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B31B801FDFB6EA00094B4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C20FE44F2225285600585CAA /* KakaoAdSDK.framework in Frameworks */,
+				C264E46F2803B77500FDE0C1 /* KakaoAdSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +91,14 @@
 				C2B31B801FDFB6EA00094B4A /* AppDelegate.h */,
 				C2B31B811FDFB6EA00094B4A /* AppDelegate.m */,
 				C2B31B831FDFB6EA00094B4A /* ViewController.h */,
+				C264E4772803B90900FDE0C1 /* File.swift */,
 				C2B31B841FDFB6EA00094B4A /* ViewController.m */,
 				C2B31B861FDFB6EA00094B4A /* Main.storyboard */,
 				C2B31B891FDFB6EA00094B4A /* Assets.xcassets */,
 				C2B31B8B1FDFB6EA00094B4A /* LaunchScreen.storyboard */,
 				C2B31B8E1FDFB6EA00094B4A /* Info.plist */,
 				C2B31B8F1FDFB6EA00094B4A /* main.m */,
+				C264E4762803B90900FDE0C1 /* KakaoAdSDKExample-Bridging-Header.h */,
 			);
 			path = KakaoAdSDKExample;
 			sourceTree = "<group>";
@@ -123,11 +130,12 @@
 		C2B31B751FDFB6EA00094B4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = KAKAO;
 				TargetAttributes = {
 					C2B31B7C1FDFB6EA00094B4A = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1330;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -169,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2B31B851FDFB6EA00094B4A /* ViewController.m in Sources */,
+				C264E4782803B90900FDE0C1 /* File.swift in Sources */,
 				C2B31B901FDFB6EA00094B4A /* main.m in Sources */,
 				C2B31B821FDFB6EA00094B4A /* AppDelegate.m in Sources */,
 			);
@@ -210,6 +219,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -217,8 +227,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -244,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -265,6 +277,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -272,8 +285,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -293,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -303,7 +318,9 @@
 		C2B31B941FDFB6EA00094B4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				INFOPLIST_FILE = KakaoAdSDKExample/Info.plist;
@@ -311,14 +328,20 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.KakaoAdSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KakaoAdSDKExample/KakaoAdSDKExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
 		C2B31B951FDFB6EA00094B4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				INFOPLIST_FILE = KakaoAdSDKExample/Info.plist;
@@ -326,7 +349,10 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.KakaoAdSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KakaoAdSDKExample/KakaoAdSDKExample-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
