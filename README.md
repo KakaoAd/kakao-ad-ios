@@ -1,6 +1,8 @@
 # **KakaoAd SDK**
 
-> 이 [가이드](https://kakaoad.github.io/kakao-ad-ios/)는 iOS Application 에 이벤트 수집을 위한 가이드를 제공하고 있습니다. 
+> 이 [가이드](https://kakaoad.github.io/kakao-ad-ios/)는 iOS Application 에 이벤트 수집을 위한 가이드를 제공하고 있습니다.
+
+# KakaoSDK 0.7.1 버전부터 최소지원 iOS 버전이 11.0으로 상향되었습니다.  
 
 ## 소개
  - iOS 어플리케이션에서 다음과 같은 이벤트를 수집하고 전송하고 있습니다. 수집된 데이터를 이용하여 다양한 목적으로 활용할 수 있습니다. 
@@ -19,7 +21,7 @@
 
 ## 지원환경 
 * [최신 버전의 Xcode](https://developer.apple.com/xcode/)
-* iOS Deployment Target: iOS 9.0 이상
+* iOS Deployment Target: iOS 11.0 이상
 * SPM 지원 (https://github.com/KakaoAd/KakaoAdPackage.git)
 
 ## License
