@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Request IDFA  Reference</title>
+  <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+  <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+  <link rel="stylesheet" type="text/css" href="css/adfit-custom.css" />
+  <meta charset="utf-8">
+  <script src="js/jquery.min.js" defer></script>
+  <script src="js/jazzy.js" defer></script>
+  
+  <script src="js/lunr.min.js" defer></script>
+  <script src="js/typeahead.jquery.js" defer></script>
+  <script src="js/jazzy.search.js" defer></script>
+  <script src="js/underscore-min.js"></script>
+</head>
+<body>
+
+
+<a title="Request IDFA  Reference"></a>
+
+<header class="header">
+  <p class="header-col header-col--primary">
+    <a class="header-link" href="index.html">
+      KakaoAdSDK Docs
+    </a>
+     (100% documented)
+  </p>
+
+  <p class="header-col--secondary">
+    <form role="search" action="search.json">
+      <input type="text" placeholder="Search documentation" data-typeahead>
+    </form>
+  </p>
+
+    <p class="header-col header-col--secondary">
+      <a class="header-link" href="https://github.com/KakaoAd/kakao-ad-ios">
+        <img class="header-icon" src="img/gh.png"/>
+        View on GitHub
+      </a>
+    </p>
+
+</header>
+
+<p class="breadcrumbs">
+  <a class="breadcrumb" href="index.html">KakaoAdSDK</a>
+  <img class="carat" src="img/carat.png" />
+  <span class="doc_title">Request IDFA</span> 
+</p>
+
+<div class="content-wrapper">
+  <nav class="navigation">
+    <ul class="nav-groups">
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="Documentation.html">Documentation</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="get-track-id.html">Get Track ID</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="install-sdk.html">Install SDK</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="project-setting.html">Project Setting</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="request-idfa.html">Request IDFA</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="start-event-tracker.html">Start Event Tracker</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="send-complete-register-event.html">Send Complete Register Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="send-view-cart-event.html">Send View Cart Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="send-view-content-event.html">Send View Content Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="send-search-event.html">Send Search Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="send-purchase-event.html">Send Purchase Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="send-participation-event.html">Send Participation Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="send-signup-event.html">Send SignUp Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="send-add-to-cart-event.html">Send Add To Cart Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="send-add-to-wishlist-event.html">Send Add To Wishlist Event</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="Classes.html">Classes</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="Classes/KakaoAdTracker.html">KakaoAdTracker</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="Models.html">Models</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="Classes/KakaoAdDetailProduct.html">KakaoAdDetailProduct</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>  <article class="main-content">
+
+    <section class="section">
+      <div class="section-content">
+        
+        <h2 id='idfa-추적-권한-요청' class='heading'>IDFA 추적 권한 요청</h2>
+
+<p>이벤트 수집을 하기 위해서 IDFA(adid) 추적에 대한 권한 요청이 필요 합니다. </p>
+
+<p>다음과 같은 상황에서 이벤트 수집이 제한 됩니다. </p>
+
+<ul>
+<li>시뮬레이터</li>
+<li>설정 - 개인 정보 보호 - 추적이 비활성화 된 경우</li>
+<li>설정 - 개인 정보 보호 - 추적 - 서비스앱의 추적 허용이 비활성화 된 경우</li>
+<li>서비스앱에서 추적 권한 요청을 하지 않은 경우</li>
+</ul>
+
+<p>권한 요청 과정은 다음과 같습니다.</p>
+<h3 id='1-프레임워크-임포트' class='heading'>1) 프레임워크 임포트</h3>
+
+<ul>
+<li>AppTrackingTransparency 프레임워크를 임포트 합니다.</li>
+<li>추적 권한 요청후 IDFA 값을 확인 하고 싶으시다면 추가적으로 AdSupport 프레임워크도 임포트 하도록 합니다.<br></li>
+</ul>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/idfa_auth_request1.png" width="640" style="border:1px solid #aaa"></p>
+<h3 id='2-함수-구현' class='heading'>2) 함수 구현</h3>
+
+<ul>
+<li>권한 요청을 위한 함수를 구현 합니다.</li>
+<li>하위의 프린트 로그들은 제거하셔도 상관 없습니다.</li>
+</ul>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/idfa_auth_request2.png" width="640" style="border:1px solid #aaa"></p>
+<h3 id='3-함수-호출' class='heading'>3) 함수 호출</h3>
+
+<ul>
+<li>구현된 함수를 호출 합니다.</li>
+<li>해당 함수의 호출시점은 iOS15 이후로, 어플리케이션이 완전히 시작된 후로 가이드 하고 있습니다.</li>
+<li>iOS15 이후에는 AppDelegate의 &lsquo;applicationDidFinish&hellip; &rsquo; 메서드에 구현할 경우 동작하지 않습니다.</li>
+<li>뷰컨트롤러 또는 구현된 어플리케이션의 적절한 시점에 맞춰 호출 해주세요.</li>
+</ul>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/idfa_auth_request3.png" width="640" style="border:1px solid #aaa"></p>
+<h3 id='4-info-plist-에-추가' class='heading'>4) info.plist 에 추가</h3>
+
+<ul>
+<li>다음과 같이 추적 권한 요청 팝업이 뜰때 표시될 설명을 입력합니다.</li>
+</ul>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/idfa_auth_request5.png" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/idfa_auth_request4.png" width="640" style="border:1px solid #aaa"></p>
+
+<ul>
+<li>info.plist를 열어 key와 value에 다음과 같이 설정 해주세요.</li>
+</ul>
+<pre class="highlight plaintext"><code>
+&lt;key&gt;NSUserTrackingUsageDescription&lt;/key&gt;
+&lt;string&gt;맞춤형 광고 추천을 위해 iOS 기기의 광고식별자를 수집합니다. &lt;/string&gt;
+
+
+</code></pre>
+<h3 id='5-앱-등록-리뷰-시-idfa-설정' class='heading'>5) 앱 등록(리뷰)시 IDFA 설정</h3>
+
+<ul>
+<li><p>iOS 앱을 App Store Connect에 제출할 때 IDFA 사용여부 및 용도를 설명하고 LAT(광고추적제한)을 반드시 설정해야 합니다.</p></li>
+<li><p>다음과 같은 플로우에 따라 설정 부탁 드립니다. </p></li>
+</ul>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa1.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa2.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa3.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa4.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa5.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa6.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa7.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa8.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa9.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/appstore-connect-add-idfa10.png
+" width="640" style="border:1px solid #aaa"></p>
+
+<p><strong>iOS14 개인정보 보호 및 데이터 사용 정책 업데이트</strong></p>
+
+<ul>
+<li>iOS14 업데이트가 진행되면서 Apple은 앱을 게시하는 개발자가 앱내에 사용되는 데이터에 관한 정보를 공개하도록 하였습니다.
+Apple은 App Store Connect를 통해서 2020년 12월 8일 부터 새로운 앱 및 업데이트시에 앱내 사용되는 정보를 공개하기 위한 내역을 페이지를 추가하였습니다.</li>
+</ul>
+
+      </div>
+    </section>
+
+
+  </article>
+</div>
+<section class="footer">
+  <p>Copyright 2021 © Kakao Corp. All Rights Reserved.</p>
+  <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+</section>
+
+<script src="js/adfit-custom.js"></script>
+</body>
+</html>

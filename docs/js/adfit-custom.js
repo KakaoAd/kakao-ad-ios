@@ -28,6 +28,7 @@ window.addEventListener('load', function() {
   var menuTitleMap = {
     "Get Track ID": "광고단위 ID 발급받기",
     "Install SDK": "SDK 설치하기",
+    "Request IDFA": "IDFA 추적 권한 요청",
     "Project Setting": "프로젝트 설정",
     "Start Event Tracker": "트랙 ID 설정 및 이벤트 트래커 활성화",
     "Send Complete Register Event": "회원가입 이벤트 전송",
