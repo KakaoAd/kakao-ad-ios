@@ -40,11 +40,12 @@ class ViewController: UIViewController {
         // 구매
         let product_1 = KakaoAdDetailProduct(name: "pencil", quantity: 5, price: 400)
         let product_2 = KakaoAdDetailProduct(name: "eraser", quantity: 1, price: 1000)
+        let product_3 = KakaoAdDetailProduct(id: "id-1", name: "ruler", quantity: 3, price: 1500)
         let totalQuantity: Int = 6
         let totalPrice: Double = 3000
         let currency = "KRW"
         
-        KakaoAdTracker.sendPurchaseEvent(tag: tag, totalQuantity: totalQuantity, totalPrice: totalPrice, currency:currency, products:[product_1, product_2])
+        KakaoAdTracker.sendPurchaseEvent(tag: tag, totalQuantity: totalQuantity, totalPrice: totalPrice, currency:currency, products:[product_1, product_2, product_3])
     }
 
     override func didReceiveMemoryWarning() {

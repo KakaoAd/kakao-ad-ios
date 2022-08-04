@@ -44,11 +44,13 @@
     // 구매
     KakaoAdDetailProduct* product_1 = [[KakaoAdDetailProduct alloc] initWithName:@"pencil" quantity:5 price:400];
     KakaoAdDetailProduct* product_2 = [[KakaoAdDetailProduct alloc] initWithName:@"eraser" quantity:1 price:1000];
+    KakaoAdDetailProduct* product_3 = [[KakaoAdDetailProduct alloc] initWithId:@"id-1" name:@"ruler" quantity:3 price:1500];
+    
     NSInteger totalQuantity = 6;
     double totalPrice = 3000;
     NSString* currency = @"KRW";
     
-    [KakaoAdTracker sendPurchaseEventWithTag:tag totalQuantity:totalQuantity totalPrice:totalPrice currency:currency products:@[product_1, product_2]];
+    [KakaoAdTracker sendPurchaseEventWithTag:tag totalQuantity:totalQuantity totalPrice:totalPrice currency:currency products:@[product_1, product_2, product_3]];
 }
 
 

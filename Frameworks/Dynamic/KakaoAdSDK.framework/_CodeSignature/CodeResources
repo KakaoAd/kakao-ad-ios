@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/KakaoAdSDK-Swift.h</key>
 		<data>
-		9umRXg88ZUBP7Vtpl3IiDq541tY=
+		dCmrWy+duBHW+4u02kWGL3cEof0=
 		</data>
 		<key>Headers/KakaoAdSDK.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xWkLJbbY4wP2tFLc3X9UXSVtx5I=
+		s0LfxQ0k+zJjMupyViEWaLO+9YE=
 		</data>
 		<key>Modules/KakaoAdSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		/SB4RIsogHlPJODWLc33DcnpNkI=
+		IZMm9MZg/cfntcaKrQyGUvzfgo0=
 		</data>
 		<key>Modules/KakaoAdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ljGOyvkvWeo4NtOzy/oHAhyygto=
+		hl2JXskDcAK527ZfniG7FZ1w7xI=
 		</data>
 		<key>Modules/KakaoAdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		LvrP7XjP300s8DhW/VAH7ZULLPA=
+		hC8f5j7Qtcv7VeOjlfa40uGtgqE=
 		</data>
 		<key>Modules/KakaoAdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6n5vvpOBY+0A4ekP3eUGyn+8SXI=
+		06xpcTEJ1IC5cr7hr6/UAgDQUP4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,7 +43,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fB03RO5uKEsscGmz47sczZVwBsPAdZyoPkZi4qtjA1U=
+			VchFsvpgm2bp/cDyHhCZMt9g3XbA0sDyDe1QzM9eMZo=
 			</data>
 		</dict>
 		<key>Headers/KakaoAdSDK.h</key>
@@ -57,28 +57,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CjE7JlrNQ8C+XFwkZOzmDdODy7qvEG96d4cWZFVTZsY=
+			gqBfiNycuYm8n68YJnaCs+6MpFFHF21MGW8oNSidYR8=
 			</data>
 		</dict>
 		<key>Modules/KakaoAdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/WC91BpKqgTFu/vN0qd7LnDv5TX3M5HgMxVSBbDxgAo=
+			TEDnG4C5XDzvr52emtZNF2y/9D72VJEoNzOuEz19YTU=
 			</data>
 		</dict>
 		<key>Modules/KakaoAdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0v22mH9sk2IqwnGQFqpZ5km1HPLffE5yKmkxWcDaufY=
+			YvEVXwo5dmkvlJILfhfjMMh7JrqNffgD3BxdRg9Wi5M=
 			</data>
 		</dict>
 		<key>Modules/KakaoAdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7bE+VC/HnlTK8MlkFAwzbl5SP+bDpkwWWdGwEImgrjU=
+			TmkRjIQtiBkKtGVL5//rHkIwQUhTUBqCrQToiRWsriM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
