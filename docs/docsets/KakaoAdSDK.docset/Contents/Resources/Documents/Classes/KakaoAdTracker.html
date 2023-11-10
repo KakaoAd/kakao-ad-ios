@@ -98,6 +98,18 @@
           <li class="nav-group-task">
             <a class="nav-group-task-link" href="../send-add-to-wishlist-event.html">Send Add To Wishlist Event</a>
           </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="../send-mission-complete-event.html">Send Mission Complete Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="../send-tutorial-event.html">Send Tutorial Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="../send-preparation-event.html">Send Preparation Event</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="../send-login-event.html">Send Login Event</a>
+          </li>
         </ul>
       </li>
       <li class="nav-group-name">
@@ -342,6 +354,122 @@ trackId 를 설정하지 않을 경우 이벤트 수집은 이루어지지 않�
                       <p class="aside-title">Swift</p>
                       <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sendPurchaseEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">totalQuantity</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">totalPrice</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/KakaoAdDetailProduct.html">KakaoAdDetailProduct</a></span><span class="p">])</span></code></pre>
+
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <code>
+                <a name="/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendMissionCompleteEventWithTag:"></a>
+                <a name="//apple_ref/swift/Method/sendMissionCompleteEvent(tag:)" class="dashAnchor"></a>
+                <a class="token" href="#/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendMissionCompleteEventWithTag:">sendMissionCompleteEvent(tag:)</a>
+                </code>
+              </div>
+              <div class="height-container">
+                <div class="pointer-container"></div>
+                <section class="section">
+                  <div class="pointer"></div>
+                  <div class="abstract">
+                    <p>목표달성
+@param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.</p>
+
+                  </div>
+                  <div class="declaration">
+                    <h4>Declaration</h4>
+                    <div class="language">
+                      <p class="aside-title">Swift</p>
+                      <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sendMissionCompleteEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <code>
+                <a name="/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendTutorialEventWithTag:"></a>
+                <a name="//apple_ref/swift/Method/sendTutorialEvent(tag:)" class="dashAnchor"></a>
+                <a class="token" href="#/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendTutorialEventWithTag:">sendTutorialEvent(tag:)</a>
+                </code>
+              </div>
+              <div class="height-container">
+                <div class="pointer-container"></div>
+                <section class="section">
+                  <div class="pointer"></div>
+                  <div class="abstract">
+                    <p>튜토리얼 이벤트
+@param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.</p>
+
+                  </div>
+                  <div class="declaration">
+                    <h4>Declaration</h4>
+                    <div class="language">
+                      <p class="aside-title">Swift</p>
+                      <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sendTutorialEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <code>
+                <a name="/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendPreparationEventWithTag:"></a>
+                <a name="//apple_ref/swift/Method/sendPreparationEvent(tag:)" class="dashAnchor"></a>
+                <a class="token" href="#/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendPreparationEventWithTag:">sendPreparationEvent(tag:)</a>
+                </code>
+              </div>
+              <div class="height-container">
+                <div class="pointer-container"></div>
+                <section class="section">
+                  <div class="pointer"></div>
+                  <div class="abstract">
+                    <p>사전준비 이벤트
+@param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.</p>
+
+                  </div>
+                  <div class="declaration">
+                    <h4>Declaration</h4>
+                    <div class="language">
+                      <p class="aside-title">Swift</p>
+                      <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sendPreparationEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <code>
+                <a name="/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendLoginEventWithTag:"></a>
+                <a name="//apple_ref/swift/Method/sendLoginEvent(tag:)" class="dashAnchor"></a>
+                <a class="token" href="#/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendLoginEventWithTag:">sendLoginEvent(tag:)</a>
+                </code>
+              </div>
+              <div class="height-container">
+                <div class="pointer-container"></div>
+                <section class="section">
+                  <div class="pointer"></div>
+                  <div class="abstract">
+                    <p>로그인 이벤트
+@param tag tag 의 경우, 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가합니다.</p>
+
+                  </div>
+                  <div class="declaration">
+                    <h4>Declaration</h4>
+                    <div class="language">
+                      <p class="aside-title">Swift</p>
+                      <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sendLoginEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
 
                     </div>
                   </div>

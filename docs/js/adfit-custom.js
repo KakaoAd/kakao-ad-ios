@@ -39,7 +39,11 @@ window.addEventListener('load', function() {
     "Send Participation Event": "잠재고객 이벤트 전송",
     "Send SignUp Event": "서비스신청 이벤트 전송",
     "Send Add To Cart Event": "장바구니 추가 이벤트 전송",
-    "Send Add To Wishlist Event": "관심상품 추가 이벤트 전송"
+    "Send Add To Wishlist Event": "관심상품 추가 이벤트 전송",
+    "Send Mission Complete Event": "목표달성 이벤트 전송",
+    "Send Tutorial Event": "튜토리얼 이벤트 전송",
+    "Send Preparation Event": "사전참여 이벤트 전송",
+    "Send Login Event": "로그인 이벤트 전송"
   };
   var elems = document.querySelectorAll('.navigation a, .doc_title');
   elems.forEach(function(elem) {
