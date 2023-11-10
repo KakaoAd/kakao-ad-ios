@@ -12,7 +12,7 @@
     "ios": "11.0"
   },
   "source": {
-    "http": "https://github.com/KakaoAd/kakao-ad-ios/tree/0.7.5/Frameworks/XCFramework/KakaoAdSDK.xcframework.zip"
+    "http": "https://github.com/KakaoAd/kakao-ad-ios/tree/0.7.5/Frameworks/XCFramework/KakaoAdSDK.zip"
   },
   "summary": "KakaoAd SDK",
   "vendored_frameworks": "Frameworks/Dynamic/KakaoAdSDK.framework"
