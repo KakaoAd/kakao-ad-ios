@@ -1,7 +1,7 @@
 framework module KakaoAdSDK {
   umbrella header "KakaoAdSDK.h"
-
   export *
+
   module * { export * }
 }
 

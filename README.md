@@ -2,6 +2,11 @@
 
 > 이 [가이드](https://kakaoad.github.io/kakao-ad-ios/)는 iOS Application 에 이벤트 수집을 위한 가이드를 제공하고 있습니다.
 
+## Xcode 15, First Party API 사용 사유 명시
+- AdFit SDK 0.7.6 버전부터 Swift 5.9(xcode 15)를 지원하며, xcode 15를 이용하시길 바랍니다.
+- AdFit SDK 0.7.6 버전부터 First Party API 사용 사유가 명시되었습니다. 
+- 자세한 내용은 [애플 공식 문서](https://developer.apple.com/kr/news/?id=z6fu1dcu&mibextid=S66gvF) 를 참고 부탁드립니다.
+
 # KakaoSDK 0.7.1 버전부터 최소지원 iOS 버전이 11.0으로 상향되었습니다.  
 
 ## 소개
