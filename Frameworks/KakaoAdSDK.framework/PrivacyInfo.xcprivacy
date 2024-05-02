@@ -65,7 +65,5 @@
 			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
 		</dict>
 	</array>
-	<key>NSPrivacyTracking</key>
-	<true/>
 </dict>
 </plist>
