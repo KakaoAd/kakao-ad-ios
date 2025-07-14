@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Send SignUp Event  Reference</title>
+  <title>Product Detail  Reference</title>
   <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
   <link rel="stylesheet" type="text/css" href="css/highlight.css" />
   <link rel="stylesheet" type="text/css" href="css/adfit-custom.css" />
@@ -17,7 +17,7 @@
 <body>
 
 
-<a title="Send SignUp Event  Reference"></a>
+<a title="Product Detail  Reference"></a>
 
 <header class="header">
   <p class="header-col header-col--primary">
@@ -45,7 +45,7 @@
 <p class="breadcrumbs">
   <a class="breadcrumb" href="index.html">KakaoAdSDK</a>
   <img class="carat" src="img/carat.png" />
-  <span class="doc_title">Send SignUp Event</span> 
+  <span class="doc_title">Product Detail</span> 
 </p>
 
 <div class="content-wrapper">
@@ -138,37 +138,63 @@
     <section class="section">
       <div class="section-content">
         
-        <h2 id='서비스신청-이벤트-전송' class='heading'>서비스신청 이벤트 전송</h2>
+        <h1 id='kakaoaddetailproducts-상품-상세-정보' class='heading'>KakaoAdDetailProducts 상품 상세 정보</h1>
+<h3 id='소개' class='heading'>소개</h3>
 
 <ul>
-<li><p><strong>Parameter</strong> <strong><strong><em>tag</em></strong></strong>: 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가 합니다.</p></li>
-<li><p><strong>가입 및 등록(SignUp)</strong> 이벤트는 아래 태그를 추가 설정하면 전환을 최적화하는데 도움이 됩니다</p></li>
+<li><code>KakaoAdDetailProducts</code> 는 <a href="send-purchase-event.html">구매</a>,<a href="send-add-to-wishlist-event.html">관심상품 추가</a>,<a href="send-add-to-cart-event.html">장바구니 추가</a>,<a href="send-view-content-event.html">콘텐츠 / 상품 조회</a> 이벤트에서 사용되는 항목입니다.</li>
+<li>0.8.0 버전부터 장바구니 추가, 관심상품 추가, 콘텐츠/상품조회 이벤트에서도 이용할 수 있게 되었습니다.<br></li>
 </ul>
-<h5 id='권장-태그-추가-목적-태그값' class='heading'>권장 태그 추가 목적 (태그값)</h5>
+<h3 id='kakaoaddetailproducts-products' class='heading'>KakaoAdDetailProducts(products)</h3>
 
 <ul>
-<li>서비스가입 (SignUp)</li>
-<li>구독완료 (Subscription)</li>
-<li>카드발급 (CardIssuance)</li>
-<li>계좌개설 (OpeningAccount)</li>
-<li>대출신청 (LoanApplication)<br></li>
+<li><strong>id</strong> 상품아이디 선택값</li>
+<li><strong>name</strong> 상품이름 선택값</li>
+<li><strong>quantity</strong> 상품수량 필수값</li>
+<li><strong>price</strong> 상품가격 필수값</li>
+<li><strong>brand</strong> 상품브랜드 선택값 (0.8.0 버전부터 제공)</li>
 </ul>
+<h3 id='변경사항' class='heading'>변경사항</h3>
 
-<h5 class="tab-title" data-tab-name="signup-request">Objective-C</h5>
-<pre class="highlight objective_c"><code>
-<span class="n">NSString</span><span class="o">*</span> <span class="n">tag</span> <span class="o">=</span> <span class="s">@"tag"</span><span class="p">;</span>
+<ul>
+<li>0.8.0 버전부터 <code><a href="Classes/KakaoAdDetailProduct.html">KakaoAdDetailProduct</a></code> 클래스에 <code>brand</code> 프로퍼티가 새롭게 추가되었습니다.</li>
+</ul>
+<h3 id='code-brand-code-프로퍼티-사용법' class='heading'><code>brand</code> 프로퍼티 사용법</h3>
+<h4 id='이전-0-7-x-이하' class='heading'>이전 (0.7.x 이하)</h4>
 
-<span class="p">[</span><span class="n">KakaoAdTracker</span> <span class="nf">sendSignUpEventWithTag</span><span class="p">:</span><span class="n">tag</span><span class="p">];</span>
-
+<h5 class="tab-title" data-tab-name="brand-1">Objective-C</h5>
+<pre class="highlight plaintext"><code>// brand 프로퍼티 없음
+KakaoAdDetailProduct *product = [[KakaoAdDetailProduct alloc] initWithId:@"product-id" name:@"상품명" quantity:2 price:50000];
 </code></pre>
 
-<h5 class="tab-title" data-tab-name="signup-request">Swift</h5>
-<pre class="highlight swift"><code>
-<span class="k">let</span> <span class="nv">tag</span> <span class="o">=</span> <span class="s">"tag"</span>
-
-<span class="kt">KakaoAdTracker</span><span class="o">.</span><span class="nf">sendSignUpEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="n">tag</span><span class="p">)</span>
-
+<h5 class="tab-title" data-tab-name="brand-1">Swift</h5>
+<pre class="highlight swift"><code><span class="c1">// brand 프로퍼티 없음</span>
+<span class="k">let</span> <span class="nv">product</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"product-id"</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"상품명"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">50000</span><span class="p">)</span>
 </code></pre>
+<h4 id='현재-0-8-0-이상' class='heading'>현재 (0.8.0 이상)</h4>
+
+<h5 class="tab-title" data-tab-name="brand-2">Objective-C</h5>
+<pre class="highlight plaintext"><code>// brand 프로퍼티 추가
+KakaoAdDetailProduct *product = [[KakaoAdDetailProduct alloc] initWithId:@"product-id" name:@"상품명" quantity:2 price:50000 brand:@"브랜드명"];
+
+// 기존 방식도 계속 지원
+KakaoAdDetailProduct *productWithoutBrand = [[KakaoAdDetailProduct alloc] initWithId:@"product-id" name:@"상품명" quantity:2 price:50000];
+</code></pre>
+
+<h5 class="tab-title" data-tab-name="brand-2">Swift</h5>
+<pre class="highlight swift"><code><span class="c1">// brand 프로퍼티 추가</span>
+<span class="k">let</span> <span class="nv">product</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"product-id"</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"상품명"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="nv">brand</span><span class="p">:</span> <span class="s">"브랜드명"</span><span class="p">)</span>
+
+<span class="c1">// 기존 방식도 계속 지원</span>
+<span class="k">let</span> <span class="nv">productWithoutBrand</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"product-id"</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"상품명"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">50000</span><span class="p">)</span>
+</code></pre>
+<h3 id='참고사항' class='heading'>참고사항</h3>
+
+<ul>
+<li><code>brand</code> 프로퍼티는 선택사항입니다. 필요한 경우에만 설정하시면 됩니다.</li>
+<li>브랜드 정보를 제공하면 더 정확한 광고 성과 측정이 가능합니다.</li>
+<li>기존 코드와의 호환성이 유지되므로 즉시 업그레이드해도 안전합니다.</li>
+</ul>
 
       </div>
     </section>

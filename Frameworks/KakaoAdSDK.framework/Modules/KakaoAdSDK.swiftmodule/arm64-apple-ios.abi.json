@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "KakaoAdSDK",
+    "printedName": "KakaoAdSDK",
     "children": [
       {
         "kind": "Import",
@@ -120,7 +120,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(id:name:quantity:price:)",
+            "printedName": "init(id:name:quantity:price:brand:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -167,13 +167,28 @@
                 "name": "Double",
                 "printedName": "Swift.Double",
                 "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdDetailProduct(im)initWithId:name:quantity:price:",
-            "mangledName": "$s10KakaoAdSDK0aB13DetailProductC2id4name8quantity5priceACSSSg_AHSiSdtcfc",
+            "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdDetailProduct(im)initWithId:name:quantity:price:brand:",
+            "mangledName": "$s10KakaoAdSDK0aB13DetailProductC2id4name8quantity5price5brandACSSSg_AISiSdAItcfc",
             "moduleName": "KakaoAdSDK",
-            "objc_name": "initWithId:name:quantity:price:",
+            "objc_name": "initWithId:name:quantity:price:brand:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -259,6 +274,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -389,6 +418,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -725,7 +768,76 @@
             "mangledName": "$s10KakaoAdSDK0aB7TrackerC20sendViewContentEvent3tag9contentIdySSSg_AGtFZ",
             "moduleName": "KakaoAdSDK",
             "static": true,
+            "deprecated": true,
             "objc_name": "sendViewContentEventWithTag:contentId:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendViewContentEvent",
+            "printedName": "sendViewContentEvent(tag:currency:products:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[KakaoAdSDK.KakaoAdDetailProduct]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KakaoAdDetailProduct",
+                    "printedName": "KakaoAdSDK.KakaoAdDetailProduct",
+                    "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdDetailProduct"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendViewContentEventWithTag:currency:products:",
+            "mangledName": "$s10KakaoAdSDK0aB7TrackerC20sendViewContentEvent3tag8currency8productsySSSg_AHSayAA0aB13DetailProductCGtFZ",
+            "moduleName": "KakaoAdSDK",
+            "static": true,
+            "objc_name": "sendViewContentEventWithTag:currency:products:",
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -1144,7 +1256,76 @@
             "mangledName": "$s10KakaoAdSDK0aB7TrackerC18sendAddToCartEvent3tag9contentIdySSSg_AGtFZ",
             "moduleName": "KakaoAdSDK",
             "static": true,
+            "deprecated": true,
             "objc_name": "sendAddToCartEventWithTag:contentId:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendAddToCartEvent",
+            "printedName": "sendAddToCartEvent(tag:currency:products:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[KakaoAdSDK.KakaoAdDetailProduct]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KakaoAdDetailProduct",
+                    "printedName": "KakaoAdSDK.KakaoAdDetailProduct",
+                    "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdDetailProduct"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendAddToCartEventWithTag:currency:products:",
+            "mangledName": "$s10KakaoAdSDK0aB7TrackerC18sendAddToCartEvent3tag8currency8productsySSSg_AHSayAA0aB13DetailProductCGtFZ",
+            "moduleName": "KakaoAdSDK",
+            "static": true,
+            "objc_name": "sendAddToCartEventWithTag:currency:products:",
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -1197,7 +1378,76 @@
             "mangledName": "$s10KakaoAdSDK0aB7TrackerC22sendAddToWishListEvent3tag9contentIdySSSg_AGtFZ",
             "moduleName": "KakaoAdSDK",
             "static": true,
+            "deprecated": true,
             "objc_name": "sendAddToWishListEventWithTag:contentId:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendAddToWishListEvent",
+            "printedName": "sendAddToWishListEvent(tag:currency:products:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[KakaoAdSDK.KakaoAdDetailProduct]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KakaoAdDetailProduct",
+                    "printedName": "KakaoAdSDK.KakaoAdDetailProduct",
+                    "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdDetailProduct"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendAddToWishListEventWithTag:currency:products:",
+            "mangledName": "$s10KakaoAdSDK0aB7TrackerC22sendAddToWishListEvent3tag8currency8productsySSSg_AHSayAA0aB13DetailProductCGtFZ",
+            "moduleName": "KakaoAdSDK",
+            "static": true,
+            "objc_name": "sendAddToWishListEventWithTag:currency:products:",
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -1248,6 +1498,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -2112,8 +2376,8 @@
           },
           {
             "kind": "Var",
-            "name": "viewContent",
-            "printedName": "viewContent",
+            "name": "legacyViewContent",
+            "printedName": "legacyViewContent",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -2185,8 +2449,208 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:10KakaoAdSDK7KCEventO11viewContentyACSSSg_AEtcACmF",
-            "mangledName": "$s10KakaoAdSDK7KCEventO11viewContentyACSSSg_AEtcACmF",
+            "usr": "s:10KakaoAdSDK7KCEventO17legacyViewContentyACSSSg_AEtcACmF",
+            "mangledName": "$s10KakaoAdSDK7KCEventO17legacyViewContentyACSSSg_AEtcACmF",
+            "moduleName": "KakaoAdSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "viewContent",
+            "printedName": "viewContent",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KakaoAdSDK.KCEvent.Type) -> (Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KCEvent",
+                        "printedName": "KakaoAdSDK.KCEvent",
+                        "usr": "s:10KakaoAdSDK7KCEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(tag: Swift.String?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "[[Swift.String : Swift.String]]?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[[Swift.String : Swift.String]]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Dictionary",
+                                    "printedName": "[Swift.String : Swift.String]",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      },
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      }
+                                    ],
+                                    "usr": "s:SD"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KakaoAdSDK.KCEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KCEvent",
+                        "printedName": "KakaoAdSDK.KCEvent",
+                        "usr": "s:10KakaoAdSDK7KCEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10KakaoAdSDK7KCEventO11viewContentyACSSSg_AESaySDyS2SGGSgtcACmF",
+            "mangledName": "$s10KakaoAdSDK7KCEventO11viewContentyACSSSg_AESaySDyS2SGGSgtcACmF",
+            "moduleName": "KakaoAdSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "legacyAddToCart",
+            "printedName": "legacyAddToCart",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KakaoAdSDK.KCEvent.Type) -> (Swift.String?, Swift.String?) -> KakaoAdSDK.KCEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String?, Swift.String?) -> KakaoAdSDK.KCEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KCEvent",
+                        "printedName": "KakaoAdSDK.KCEvent",
+                        "usr": "s:10KakaoAdSDK7KCEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(tag: Swift.String?, content: Swift.String?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KakaoAdSDK.KCEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KCEvent",
+                        "printedName": "KakaoAdSDK.KCEvent",
+                        "usr": "s:10KakaoAdSDK7KCEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10KakaoAdSDK7KCEventO15legacyAddToCartyACSSSg_AEtcACmF",
+            "mangledName": "$s10KakaoAdSDK7KCEventO15legacyAddToCartyACSSSg_AEtcACmF",
             "moduleName": "KakaoAdSDK",
             "declAttributes": [
               "RawDocComment"
@@ -2200,12 +2664,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(KakaoAdSDK.KCEvent.Type) -> (Swift.String?, Swift.String?) -> KakaoAdSDK.KCEvent",
+                "printedName": "(KakaoAdSDK.KCEvent.Type) -> (Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.String?, Swift.String?) -> KakaoAdSDK.KCEvent",
+                    "printedName": "(Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -2216,7 +2680,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(tag: Swift.String?, content: Swift.String?)",
+                        "printedName": "(tag: Swift.String?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -2245,6 +2709,42 @@
                               }
                             ],
                             "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "[[Swift.String : Swift.String]]?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[[Swift.String : Swift.String]]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Dictionary",
+                                    "printedName": "[Swift.String : Swift.String]",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      },
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      }
+                                    ],
+                                    "usr": "s:SD"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ],
+                            "usr": "s:Sq"
                           }
                         ]
                       }
@@ -2267,8 +2767,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:10KakaoAdSDK7KCEventO9addToCartyACSSSg_AEtcACmF",
-            "mangledName": "$s10KakaoAdSDK7KCEventO9addToCartyACSSSg_AEtcACmF",
+            "usr": "s:10KakaoAdSDK7KCEventO9addToCartyACSSSg_AESaySDyS2SGGSgtcACmF",
+            "mangledName": "$s10KakaoAdSDK7KCEventO9addToCartyACSSSg_AESaySDyS2SGGSgtcACmF",
             "moduleName": "KakaoAdSDK",
             "declAttributes": [
               "RawDocComment"
@@ -2276,8 +2776,8 @@
           },
           {
             "kind": "Var",
-            "name": "addToWishList",
-            "printedName": "addToWishList",
+            "name": "legacyAddToWishList",
+            "printedName": "legacyAddToWishList",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -2349,8 +2849,126 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:10KakaoAdSDK7KCEventO13addToWishListyACSSSg_AEtcACmF",
-            "mangledName": "$s10KakaoAdSDK7KCEventO13addToWishListyACSSSg_AEtcACmF",
+            "usr": "s:10KakaoAdSDK7KCEventO19legacyAddToWishListyACSSSg_AEtcACmF",
+            "mangledName": "$s10KakaoAdSDK7KCEventO19legacyAddToWishListyACSSSg_AEtcACmF",
+            "moduleName": "KakaoAdSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addToWishList",
+            "printedName": "addToWishList",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KakaoAdSDK.KCEvent.Type) -> (Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KCEvent",
+                        "printedName": "KakaoAdSDK.KCEvent",
+                        "usr": "s:10KakaoAdSDK7KCEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(tag: Swift.String?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "[[Swift.String : Swift.String]]?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[[Swift.String : Swift.String]]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Dictionary",
+                                    "printedName": "[Swift.String : Swift.String]",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      },
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      }
+                                    ],
+                                    "usr": "s:SD"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KakaoAdSDK.KCEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KCEvent",
+                        "printedName": "KakaoAdSDK.KCEvent",
+                        "usr": "s:10KakaoAdSDK7KCEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10KakaoAdSDK7KCEventO13addToWishListyACSSSg_AESaySDyS2SGGSgtcACmF",
+            "mangledName": "$s10KakaoAdSDK7KCEventO13addToWishListyACSSSg_AESaySDyS2SGGSgtcACmF",
             "moduleName": "KakaoAdSDK",
             "declAttributes": [
               "RawDocComment"
@@ -2655,6 +3273,22 @@
         "moduleName": "KakaoAdSDK",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -2833,6 +3467,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -2887,532 +3535,420 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Utils\/System.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Utils\/System.swift",
       "kind": "StringLiteral",
       "offset": 348,
       "length": 9,
       "value": "\"OFFLINE\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Utils\/System.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Utils\/System.swift",
       "kind": "StringLiteral",
       "offset": 412,
       "length": 4,
       "value": "\"3G\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Utils\/System.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Utils\/System.swift",
       "kind": "StringLiteral",
       "offset": 475,
       "length": 6,
       "value": "\"WIFI\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Utils\/System.swift",
-      "kind": "StringLiteral",
-      "offset": 348,
-      "length": 9,
-      "value": "\"OFFLINE\""
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Utils\/System.swift",
-      "kind": "StringLiteral",
-      "offset": 412,
-      "length": 4,
-      "value": "\"3G\""
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Utils\/System.swift",
-      "kind": "StringLiteral",
-      "offset": 475,
-      "length": 6,
-      "value": "\"WIFI\""
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Model\/KakaoAdDetailProduct.swift",
-      "kind": "StringLiteral",
-      "offset": 342,
-      "length": 20,
-      "value": "\"KakaoAdSDK.KakaoAdDetailProduct\""
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Utils\/Store.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Utils\/Store.swift",
       "kind": "StringLiteral",
       "offset": 205,
       "length": 11,
       "value": "\"KakaoChip\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsoleViewController.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsoleViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 3167,
       "length": 2,
       "value": "36"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsoleViewController.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsoleViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 3207,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Tracker\/KakaoAdTracker.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Tracker\/KakaoAdTracker.swift",
       "kind": "StringLiteral",
       "offset": 761,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "StringLiteral",
       "offset": 246,
       "length": 15,
       "value": "\"Menlo-Regular\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 269,
       "length": 1,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 301,
       "length": 1,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 344,
       "length": 2,
       "value": "25"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "FloatLiteral",
       "offset": 518,
       "length": 4,
       "value": "0.81"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "FloatLiteral",
       "offset": 531,
       "length": 4,
       "value": "0.39"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 543,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 553,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 667,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "FloatLiteral",
       "offset": 677,
       "length": 3,
       "value": "0.1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "FloatLiteral",
       "offset": 688,
       "length": 3,
       "value": "0.1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 700,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "FloatLiteral",
       "offset": 791,
       "length": 3,
       "value": "0.1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "FloatLiteral",
       "offset": 803,
       "length": 3,
       "value": "0.1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "FloatLiteral",
       "offset": 814,
       "length": 3,
       "value": "0.1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 826,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "StringLiteral",
       "offset": 3952,
       "length": 15,
       "value": "\"Menlo-Regular\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 3975,
       "length": 1,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 4007,
       "length": 1,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "StringLiteral",
       "offset": 240,
       "length": 20,
       "value": "\"타임이즈골드\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "BooleanLiteral",
       "offset": 295,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "BooleanLiteral",
       "offset": 330,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "BooleanLiteral",
       "offset": 406,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "BooleanLiteral",
       "offset": 429,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "BooleanLiteral",
       "offset": 365,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "IntegerLiteral",
       "offset": 567,
       "length": 2,
       "value": "70"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "IntegerLiteral",
       "offset": 574,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "IntegerLiteral",
       "offset": 586,
       "length": 2,
       "value": "36"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/LogConsole.swift",
       "kind": "IntegerLiteral",
       "offset": 598,
       "length": 2,
       "value": "36"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Tracker\/PaymentObserver.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Tracker\/PaymentObserver.swift",
       "kind": "BooleanLiteral",
       "offset": 1230,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Utils\/TesterConfig.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Utils\/TesterConfig.swift",
       "kind": "StringLiteral",
       "offset": 231,
       "length": 24,
       "value": "\"KakaoChipTesterContext\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Utils\/TesterConfig.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Utils\/TesterConfig.swift",
       "kind": "StringLiteral",
       "offset": 296,
       "length": 25,
       "value": "\"KakaoChipTesterSettings\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/API\/Api.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/API\/Api.swift",
       "kind": "StringLiteral",
       "offset": 212,
       "length": 27,
       "value": "\"https:\/\/bc.ad.daum.net\/bc\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
       "kind": "IntegerLiteral",
       "offset": 502,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
       "kind": "IntegerLiteral",
       "offset": 549,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
       "kind": "StringLiteral",
       "offset": 611,
       "length": 12,
       "value": "\"kakaoAdSDK\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
       "kind": "StringLiteral",
       "offset": 626,
       "length": 26,
       "value": "\".HttpClient.waitingQueue\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
       "kind": "StringLiteral",
       "offset": 713,
       "length": 12,
       "value": "\"kakaoAdSDK\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/API\/HttpClient.swift",
       "kind": "StringLiteral",
       "offset": 728,
       "length": 26,
       "value": "\".HttpClient.workingQueue\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 246,
       "length": 4,
       "value": "\"ad\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 272,
       "length": 7,
       "value": "\"event\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 301,
       "length": 7,
       "value": "\"image\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 330,
       "length": 5,
       "value": "\"sal\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 246,
-      "length": 4,
-      "value": "\"ad\""
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 272,
-      "length": 7,
-      "value": "\"event\""
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 301,
-      "length": 7,
-      "value": "\"image\""
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 330,
-      "length": 5,
-      "value": "\"sal\""
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 405,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 427,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 449,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 472,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 405,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 427,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 449,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 472,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 405,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 427,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 449,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 472,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1669,
       "length": 12,
       "value": "\"kakaoAdSDK\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1684,
       "length": 23,
       "value": "\".Logger.printingQueue\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1768,
       "length": 12,
       "value": "\"kakaoAdSDK\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1783,
       "length": 22,
       "value": "\".Logger.loggingQueue\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 2165,
       "length": 14,
       "value": "\"HH:mm:ss.SSS\""
     },
     {
-      "filePath": "\/Users\/kakao\/Desktop\/github\/kakao-ad-ios-internal\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
+      "filePath": "\/Users\/kyle\/Documents\/kakao-chip-ios\/KakaoAdSDK\/KakaoAdSDK\/Logging\/Logger.swift",
       "kind": "BooleanLiteral",
       "offset": 2363,
       "length": 5,

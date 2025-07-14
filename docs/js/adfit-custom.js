@@ -26,11 +26,13 @@ HTMLElement.prototype.removeClass = function(targetClass) {
 window.addEventListener('load', function() {
   // 1. 사이드바, 상단 네비바의 영문 메뉴명을 한글로 변경.
   var menuTitleMap = {
+    "ChangeLog": "버전별 변경 사항",
     "Get Track ID": "광고단위 ID 발급받기",
     "Install SDK": "SDK 설치하기",
     "Request IDFA": "IDFA 추적 권한 요청",
     "Project Setting": "프로젝트 설정",
     "Start Event Tracker": "트랙 ID 설정 및 이벤트 트래커 활성화",
+    "Product Detail": "상품 상세 정보",
     "Send Complete Register Event": "회원가입 이벤트 전송",
     "Send View Cart Event": "장바구니 보기 이벤트 전송",
     "Send View Content Event": "콘텐츠 / 상품 조회 이벤트 전송",

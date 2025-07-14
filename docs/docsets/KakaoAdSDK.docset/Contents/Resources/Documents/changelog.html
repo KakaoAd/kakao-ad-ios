@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Send SignUp Event  Reference</title>
+  <title>ChangeLog  Reference</title>
   <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
   <link rel="stylesheet" type="text/css" href="css/highlight.css" />
   <link rel="stylesheet" type="text/css" href="css/adfit-custom.css" />
@@ -17,7 +17,7 @@
 <body>
 
 
-<a title="Send SignUp Event  Reference"></a>
+<a title="ChangeLog  Reference"></a>
 
 <header class="header">
   <p class="header-col header-col--primary">
@@ -45,7 +45,7 @@
 <p class="breadcrumbs">
   <a class="breadcrumb" href="index.html">KakaoAdSDK</a>
   <img class="carat" src="img/carat.png" />
-  <span class="doc_title">Send SignUp Event</span> 
+  <span class="doc_title">ChangeLog</span> 
 </p>
 
 <div class="content-wrapper">
@@ -138,37 +138,29 @@
     <section class="section">
       <div class="section-content">
         
-        <h2 id='서비스신청-이벤트-전송' class='heading'>서비스신청 이벤트 전송</h2>
+        <h1 id='kakaoad-sdk-변경-사항' class='heading'>KakaoAd SDK 변경 사항</h1>
+<h2 id='0-8-0' class='heading'>0.8.0</h2>
+<h3 id='주요-변경-사항' class='heading'>주요 변경 사항</h3>
+<h4 id='상품속성-및-이벤트-파라미터-변경' class='heading'>상품속성 및 이벤트 파라미터 변경</h4>
 
 <ul>
-<li><p><strong>Parameter</strong> <strong><strong><em>tag</em></strong></strong>: 한 광고계정 내에서 같은 이벤트코드 내에서도 특별한 분류가 필요할 때 추가 합니다.</p></li>
-<li><p><strong>가입 및 등록(SignUp)</strong> 이벤트는 아래 태그를 추가 설정하면 전환을 최적화하는데 도움이 됩니다</p></li>
-</ul>
-<h5 id='권장-태그-추가-목적-태그값' class='heading'>권장 태그 추가 목적 (태그값)</h5>
+<li><code><a href="Classes/KakaoAdDetailProduct.html">KakaoAdDetailProduct</a></code> 클래스에 <code>brand</code> 프로퍼티가 새롭게 추가되었습니다. <a href="product-detail.html">변경 사항 보러 가기</a></li>
+<li>장바구니 추가, 관심상품 추가, 콘텐츠/상품 조회 이벤트의 파라미터가 변경되었습니다.
 
 <ul>
-<li>서비스가입 (SignUp)</li>
-<li>구독완료 (Subscription)</li>
-<li>카드발급 (CardIssuance)</li>
-<li>계좌개설 (OpeningAccount)</li>
-<li>대출신청 (LoanApplication)<br></li>
+<li><strong>기존(0.7.8 이하):</strong> <code>tag</code>, <code>contentId</code> 전달 방식</li>
+<li><strong>변경(0.8.0 이상):</strong> <code>tag</code>, <code>currency</code>, <code>products</code> 배열(<code><a href="Classes/KakaoAdDetailProduct.html">KakaoAdDetailProduct</a></code> 활용) 전달 방식 (currency는 ISO4217, 기본값 &ldquo;KRW&rdquo;)</li>
+<li><code>products</code>는 여러 상품을 배열로 전달하며, brand 등 상세 속성 추가 가능</li>
+<li>Swift/Objective-C 모두 동일한 방식으로 지원</li>
+</ul></li>
+<li>각 이벤트별 상세 변경 사항 및 예시 코드는 아래 문서를 참고하세요.
+
+<ul>
+<li><a href="send-add-to-cart-event.html">장바구니 추가 이벤트 변경 사항</a></li>
+<li><a href="send-add-to-wishlist-event.html">관심상품 추가 이벤트 변경 사항</a></li>
+<li><a href="send-view-content-event.html">콘텐츠/상품 조회 이벤트 변경 사항</a></li>
+</ul></li>
 </ul>
-
-<h5 class="tab-title" data-tab-name="signup-request">Objective-C</h5>
-<pre class="highlight objective_c"><code>
-<span class="n">NSString</span><span class="o">*</span> <span class="n">tag</span> <span class="o">=</span> <span class="s">@"tag"</span><span class="p">;</span>
-
-<span class="p">[</span><span class="n">KakaoAdTracker</span> <span class="nf">sendSignUpEventWithTag</span><span class="p">:</span><span class="n">tag</span><span class="p">];</span>
-
-</code></pre>
-
-<h5 class="tab-title" data-tab-name="signup-request">Swift</h5>
-<pre class="highlight swift"><code>
-<span class="k">let</span> <span class="nv">tag</span> <span class="o">=</span> <span class="s">"tag"</span>
-
-<span class="kt">KakaoAdTracker</span><span class="o">.</span><span class="nf">sendSignUpEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="n">tag</span><span class="p">)</span>
-
-</code></pre>
 
       </div>
     </section>

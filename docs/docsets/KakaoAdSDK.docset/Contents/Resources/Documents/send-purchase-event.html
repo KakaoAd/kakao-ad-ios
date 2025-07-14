@@ -34,7 +34,7 @@
   </p>
 
     <p class="header-col header-col--secondary">
-      <a class="header-link" href="https://github.com/KakaoAd/kakao-ad-ios">
+      <a class="header-link" href="https://github.daumkakao.com/ads-sdk/kakao-pixel-ios">
         <img class="header-icon" src="img/gh.png"/>
         View on GitHub
       </a>
@@ -55,6 +55,9 @@
         <a class="nav-group-name-link" href="Documentation.html">Documentation</a>
         <ul class="nav-group-tasks">
           <li class="nav-group-task">
+            <a class="nav-group-task-link" href="changelog.html">ChangeLog</a>
+          </li>
+          <li class="nav-group-task">
             <a class="nav-group-task-link" href="get-track-id.html">Get Track ID</a>
           </li>
           <li class="nav-group-task">
@@ -68,6 +71,9 @@
           </li>
           <li class="nav-group-task">
             <a class="nav-group-task-link" href="start-event-tracker.html">Start Event Tracker</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="product-detail.html">Product Detail</a>
           </li>
           <li class="nav-group-task">
             <a class="nav-group-task-link" href="send-complete-register-event.html">Send Complete Register Event</a>
@@ -141,18 +147,66 @@
 <li><strong>Parameter</strong> <strong><strong><em>totalPrice</em></strong></strong>: 결제 금액 통화 <a href="https://ko.wikipedia.org/wiki/ISO_4217">ISO4217 포맷</a></li>
 <li><strong>Parameter</strong> <strong><strong><em>products</em></strong></strong>: KakaoAdDetailProducts 클래스 객체의 Array 타입을 입력 받습니다. 개별 주문 상품 상세 정보의 리스트 입니다.</li>
 </ul>
+<h3 id='kakaoaddetailproducts-products' class='heading'>KakaoAdDetailProducts(products)</h3>
+
+<ul>
+<li><strong>id</strong> 상품아이디 선택값</li>
+<li><strong>name</strong> 상품이름 선택값</li>
+<li><strong>quantity</strong> 상품수량 필수값</li>
+<li><strong>price</strong> 상품가격 필수값</li>
+<li><strong>brand</strong> 상품브랜드 선택값 (0.8.0 버전부터 제공)</li>
+</ul>
+<h3 id='변경사항' class='heading'>변경사항</h3>
+
+<ul>
+<li>0.8.0 버전부터 <code><a href="Classes/KakaoAdDetailProduct.html">KakaoAdDetailProduct</a></code> 클래스에 <code>brand</code> 프로퍼티가 새롭게 추가되었습니다.</li>
+</ul>
+<h3 id='code-brand-code-프로퍼티-사용법' class='heading'><code>brand</code> 프로퍼티 사용법</h3>
+<h4 id='이전-0-7-x-이하' class='heading'>이전 (0.7.x 이하)</h4>
+
+<h5 class="tab-title" data-tab-name="brand-1">Objective-C</h5>
+<pre class="highlight plaintext"><code>// brand 프로퍼티 없음
+KakaoAdDetailProduct *product = [[KakaoAdDetailProduct alloc] initWithId:@"product-id" name:@"상품명" quantity:2 price:50000];
+</code></pre>
+
+<h5 class="tab-title" data-tab-name="brand-1">Swift</h5>
+<pre class="highlight swift"><code><span class="c1">// brand 프로퍼티 없음</span>
+<span class="k">let</span> <span class="nv">product</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"product-id"</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"상품명"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">50000</span><span class="p">)</span>
+</code></pre>
+<h4 id='현재-0-8-0-이상' class='heading'>현재 (0.8.0 이상)</h4>
+
+<h5 class="tab-title" data-tab-name="brand-2">Objective-C</h5>
+<pre class="highlight plaintext"><code>// brand 프로퍼티 추가
+KakaoAdDetailProduct *product = [[KakaoAdDetailProduct alloc] initWithId:@"product-id" name:@"상품명" quantity:2 price:50000 brand:@"브랜드명"];
+
+// 기존 방식도 계속 지원
+KakaoAdDetailProduct *productWithoutBrand = [[KakaoAdDetailProduct alloc] initWithId:@"product-id" name:@"상품명" quantity:2 price:50000];
+</code></pre>
+
+<h5 class="tab-title" data-tab-name="brand-2">Swift</h5>
+<pre class="highlight swift"><code><span class="c1">// brand 프로퍼티 추가</span>
+<span class="k">let</span> <span class="nv">product</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"product-id"</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"상품명"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="nv">brand</span><span class="p">:</span> <span class="s">"브랜드명"</span><span class="p">)</span>
+
+<span class="c1">// 기존 방식도 계속 지원</span>
+<span class="k">let</span> <span class="nv">productWithoutBrand</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"product-id"</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"상품명"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">50000</span><span class="p">)</span>
+</code></pre>
+<h3 id='사용-예시' class='heading'>사용 예시</h3>
+
+<p>다음은 브랜드 정보가 포함된 상품으로 구매 이벤트를 추적하는 예시입니다:</p>
 
 <h5 class="tab-title" data-tab-name="purchase-request">Objective-C</h5>
 <pre class="highlight objective_c"><code>
 <span class="n">NSString</span><span class="o">*</span> <span class="n">tag</span> <span class="o">=</span> <span class="s">@"tag"</span><span class="p">;</span>
 <span class="n">KakaoAdDetailProduct</span><span class="o">*</span> <span class="n">product_1</span> <span class="o">=</span> <span class="p">[[</span><span class="n">KakaoAdDetailProduct</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithName</span><span class="p">:</span><span class="s">@"pencil"</span> <span class="nf">quantity</span><span class="p">:</span><span class="mi">5</span> <span class="n">price</span><span class="o">:</span><span class="mi">400</span><span class="p">];</span>
 <span class="n">KakaoAdDetailProduct</span><span class="o">*</span> <span class="n">product_2</span> <span class="o">=</span> <span class="p">[[</span><span class="n">KakaoAdDetailProduct</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithName</span><span class="p">:</span><span class="s">@"eraser"</span> <span class="nf">quantity</span><span class="p">:</span><span class="mi">1</span> <span class="n">price</span><span class="o">:</span><span class="mi">1000</span><span class="p">];</span>
-<span class="n">KakaoAdDetailProduct</span><span class="o">*</span> <span class="n">product_3</span> <span class="o">=</span> <span class="p">[[</span><span class="n">KakaoAdDetailProduct</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithId</span><span class="p">:</span><span class="s">@"id-1"</span> <span class="nf">name</span><span class="p">:</span><span class="s">@"ruler"</span> <span class="n">quantity</span><span class="o">:</span><span class="mi">3</span> <span class="n">price</span><span class="o">:</span><span class="mi">1500</span><span class="p">];</span>
+<span class="n">KakaoAdDetailProduct</span><span class="o">*</span> <span class="n">product_3</span> <span class="o">=</span> <span class="p">[[</span><span class="n">KakaoAdDetailProduct</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithId</span><span class="p">:</span><span class="s">@"product-1"</span> <span class="nf">name</span><span class="p">:</span><span class="s">@"ruler"</span> <span class="n">quantity</span><span class="o">:</span><span class="mi">3</span> <span class="n">price</span><span class="o">:</span><span class="mi">1500</span><span class="p">];</span>
+<span class="n">KakaoAdDetailProduct</span> <span class="o">*</span><span class="n">product_4</span> <span class="o">=</span> <span class="p">[[</span><span class="n">KakaoAdDetailProduct</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithId</span><span class="p">:</span><span class="s">@"product-2"</span> <span class="nf">name</span><span class="p">:</span><span class="s">@"선풍기"</span> <span class="n">quantity</span><span class="o">:</span><span class="mi">2</span> <span class="n">price</span><span class="o">:</span><span class="mi">50000</span> <span class="n">brand</span><span class="o">:</span><span class="s">@"카카오"</span><span class="p">];</span>
+
 <span class="n">NSInteger</span> <span class="n">totalQuantity</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 <span class="kt">double</span> <span class="n">totalPrice</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
 <span class="n">NSString</span><span class="o">*</span> <span class="n">currency</span> <span class="o">=</span> <span class="s">@"KRW"</span><span class="p">;</span>
 
-<span class="p">[</span><span class="n">KakaoAdTracker</span> <span class="nf">sendPurchaseEventWithTag</span><span class="p">:</span><span class="n">tag</span> <span class="nf">totalQuantity</span><span class="p">:</span><span class="n">totalQuantity</span> <span class="n">totalPrice</span><span class="o">:</span><span class="n">totalPrice</span> <span class="n">currency</span><span class="o">:</span><span class="n">currency</span> <span class="n">products</span><span class="o">:</span><span class="p">@[</span><span class="n">product_1</span><span class="p">,</span> <span class="n">product_2</span><span class="p">,</span> <span class="n">product_3</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">KakaoAdTracker</span> <span class="nf">sendPurchaseEventWithTag</span><span class="p">:</span><span class="n">tag</span> <span class="nf">totalQuantity</span><span class="p">:</span><span class="n">totalQuantity</span> <span class="n">totalPrice</span><span class="o">:</span><span class="n">totalPrice</span> <span class="n">currency</span><span class="o">:</span><span class="n">currency</span> <span class="n">products</span><span class="o">:</span><span class="p">@[</span><span class="n">product_1</span><span class="p">,</span> <span class="n">product_2</span><span class="p">,</span> <span class="n">product_3</span><span class="p">,</span> <span class="n">product_4</span><span class="p">]];</span>
 
 </code></pre>
 
@@ -161,14 +215,23 @@
 <span class="k">let</span> <span class="nv">tag</span> <span class="o">=</span> <span class="s">"tag"</span>
 <span class="k">let</span> <span class="nv">product_1</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"pencil"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">400</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">product_2</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"eraser"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">product_3</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"ruler"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">1500</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">product_3</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"product-1"</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"ruller"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">1500</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">product_4</span> <span class="o">=</span> <span class="kt">KakaoAdDetailProduct</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"product-2"</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"선풍기"</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">price</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="nv">brand</span><span class="p">:</span> <span class="s">"카카오"</span><span class="p">)</span>
+
 <span class="k">let</span> <span class="nv">totalQuantity</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="k">let</span> <span class="nv">totalPrice</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">3000</span>
 <span class="k">let</span> <span class="nv">currency</span> <span class="o">=</span> <span class="s">"KRW"</span>
 
-<span class="kt">KakaoAdTracker</span><span class="o">.</span><span class="nf">sendPurchaseEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="n">tag</span><span class="p">,</span> <span class="nv">totalQuantity</span><span class="p">:</span> <span class="n">totalQuantity</span><span class="p">,</span> <span class="nv">totalPrice</span><span class="p">:</span> <span class="n">totalPrice</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span><span class="n">currency</span><span class="p">,</span> <span class="nv">products</span><span class="p">:[</span><span class="n">product_1</span><span class="p">,</span> <span class="n">product_2</span><span class="p">,</span> <span class="n">product_3</span><span class="p">])</span>
+<span class="kt">KakaoAdTracker</span><span class="o">.</span><span class="nf">sendPurchaseEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="n">tag</span><span class="p">,</span> <span class="nv">totalQuantity</span><span class="p">:</span> <span class="n">totalQuantity</span><span class="p">,</span> <span class="nv">totalPrice</span><span class="p">:</span> <span class="n">totalPrice</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span><span class="n">currency</span><span class="p">,</span> <span class="nv">products</span><span class="p">:[</span><span class="n">product_1</span><span class="p">,</span> <span class="n">product_2</span><span class="p">,</span> <span class="n">product_3</span><span class="p">,</span> <span class="n">product_4</span><span class="p">])</span>
 
 </code></pre>
+<h3 id='참고사항' class='heading'>참고사항</h3>
+
+<ul>
+<li><code>brand</code> 프로퍼티는 선택사항입니다. 필요한 경우에만 설정하시면 됩니다.</li>
+<li>브랜드 정보를 제공하면 더 정확한 광고 성과 측정이 가능합니다.</li>
+<li>기존 코드와의 호환성이 유지되므로 즉시 업그레이드해도 안전합니다.</li>
+</ul>
 
       </div>
     </section>

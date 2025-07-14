@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name KakaoAdSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AdSupport
 import AppTrackingTransparency
 import CoreTelephony
@@ -15,7 +16,7 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 @objc public class KakaoAdDetailProduct : ObjectiveC.NSObject {
   @objc public init(name: Swift.String?, quantity: Swift.Int, price: Swift.Double)
-  @objc public init(id: Swift.String?, name: Swift.String?, quantity: Swift.Int, price: Swift.Double)
+  @objc public init(id: Swift.String?, name: Swift.String?, quantity: Swift.Int, price: Swift.Double, brand: Swift.String? = nil)
   @objc public func dictionaryRepresentation() -> [Swift.String : Swift.String]
   @objc deinit
 }
@@ -29,7 +30,9 @@ import _SwiftConcurrencyShims
   @objc public static func activate()
   @objc public static func sendViewCartEvent(tag: Swift.String?)
   @objc public static func sendCompleteRegisterEvent(tag: Swift.String?)
+  @available(*, deprecated, message: "이 함수는 더 이상 사용되지 않습니다. 대신 sendViewContentEvent(tag:products:)를 사용하세요.")
   @objc public static func sendViewContentEvent(tag: Swift.String?, contentId: Swift.String?)
+  @objc public static func sendViewContentEvent(tag: Swift.String?, currency: Swift.String?, products: [KakaoAdSDK.KakaoAdDetailProduct])
   @objc public static func sendSearchEvent(tag: Swift.String?, searchString: Swift.String?)
   @objc public static func sendPurchaseEvent(tag: Swift.String?, totalQuantity: Swift.Int, totalPrice: Swift.Double, currency: Swift.String?, products: [KakaoAdSDK.KakaoAdDetailProduct])
   @objc public static func sendMissionCompleteEvent(tag: Swift.String?)
@@ -38,8 +41,12 @@ import _SwiftConcurrencyShims
   @objc public static func sendLoginEvent(tag: Swift.String?)
   @objc public static func sendParticipationEvent(tag: Swift.String?)
   @objc public static func sendSignUpEvent(tag: Swift.String?)
+  @available(*, deprecated, message: "이 함수는 더 이상 사용되지 않습니다. 대신 sendAddToCartEvent(tag:products:)를 사용하세요.")
   @objc public static func sendAddToCartEvent(tag: Swift.String?, contentId: Swift.String?)
+  @objc public static func sendAddToCartEvent(tag: Swift.String?, currency: Swift.String?, products: [KakaoAdSDK.KakaoAdDetailProduct])
+  @available(*, deprecated, message: "이 함수는 더 이상 사용되지 않습니다. 대신 sendAddToWishListEvent(tag:products:)를 사용하세요.")
   @objc public static func sendAddToWishListEvent(tag: Swift.String?, contentId: Swift.String?)
+  @objc public static func sendAddToWishListEvent(tag: Swift.String?, currency: Swift.String?, products: [KakaoAdSDK.KakaoAdDetailProduct])
   @objc override dynamic public init()
   @objc deinit
 }
@@ -55,9 +62,12 @@ public enum KCEvent {
   case signUp(tag: Swift.String?)
   case viewCart(tag: Swift.String?)
   case search(tag: Swift.String?, search: Swift.String?)
-  case viewContent(tag: Swift.String?, content: Swift.String?)
-  case addToCart(tag: Swift.String?, content: Swift.String?)
-  case addToWishList(tag: Swift.String?, content: Swift.String?)
+  case legacyViewContent(tag: Swift.String?, content: Swift.String?)
+  case viewContent(tag: Swift.String?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)
+  case legacyAddToCart(tag: Swift.String?, content: Swift.String?)
+  case addToCart(tag: Swift.String?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)
+  case legacyAddToWishList(tag: Swift.String?, content: Swift.String?)
+  case addToWishList(tag: Swift.String?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)
   case purchase(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)
   case inAppPurchase(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)
 }
