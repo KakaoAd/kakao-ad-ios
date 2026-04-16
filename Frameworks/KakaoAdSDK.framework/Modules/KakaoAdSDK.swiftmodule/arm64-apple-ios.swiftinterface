@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name KakaoAdSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KakaoAdSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
 import AdSupport
 import AppTrackingTransparency
 import CoreTelephony
@@ -34,7 +34,7 @@ import _SwiftConcurrencyShims
   @objc public static func sendViewContentEvent(tag: Swift.String?, contentId: Swift.String?)
   @objc public static func sendViewContentEvent(tag: Swift.String?, currency: Swift.String?, products: [KakaoAdSDK.KakaoAdDetailProduct])
   @objc public static func sendSearchEvent(tag: Swift.String?, searchString: Swift.String?)
-  @objc public static func sendPurchaseEvent(tag: Swift.String?, totalQuantity: Swift.Int, totalPrice: Swift.Double, currency: Swift.String?, products: [KakaoAdSDK.KakaoAdDetailProduct])
+  @objc public static func sendPurchaseEvent(tag: Swift.String?, totalQuantity: Swift.Int, totalPrice: Swift.Double, currency: Swift.String?, transactionId: Swift.String?, products: [KakaoAdSDK.KakaoAdDetailProduct])
   @objc public static func sendMissionCompleteEvent(tag: Swift.String?)
   @objc public static func sendTutorialEvent(tag: Swift.String?)
   @objc public static func sendPreparationEvent(tag: Swift.String?)
@@ -68,8 +68,8 @@ public enum KCEvent {
   case addToCart(tag: Swift.String?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)
   case legacyAddToWishList(tag: Swift.String?, content: Swift.String?)
   case addToWishList(tag: Swift.String?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)
-  case purchase(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)
-  case inAppPurchase(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)
+  case purchase(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, transactionId: Swift.String?, products: [[Swift.String : Swift.String]]?)
+  case inAppPurchase(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, transactionId: Swift.String?, products: [[Swift.String : Swift.String]]?)
 }
 @_inheritsConvenienceInitializers @objc final public class Logger : ObjectiveC.NSObject {
   @objc public static func debug(_ log: Swift.String, fileName: Swift.String = #file, functionName: Swift.String = #function, line: Swift.Int = #line)

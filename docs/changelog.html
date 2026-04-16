@@ -139,6 +139,20 @@
       <div class="section-content">
         
         <h1 id='kakaoad-sdk-변경-사항' class='heading'>KakaoAd SDK 변경 사항</h1>
+<h2 id='0-8-1' class='heading'>0.8.1</h2>
+<h3 id='주요-변경-사항' class='heading'>주요 변경 사항</h3>
+<h4 id='구매-이벤트에-code-transactionid-code-파라미터-추가' class='heading'>구매 이벤트에 <code>transactionId</code> 파라미터 추가</h4>
+
+<ul>
+<li>구매 이벤트(<code>sendPurchaseEvent</code>)에 <code>transactionId</code> 파라미터가 새롭게 추가되었습니다.
+
+<ul>
+<li>주문번호와 같이, 구매에 대한 유니크한 단위 ID를 전달할 수 있습니다.</li>
+<li>선택값이며, 리워드 광고 전환 측정이 필요한 경우에 설정합니다.</li>
+<li>기존 코드와의 호환성이 유지됩니다. (<code>transactionId</code>에 <code>nil</code>을 전달하면 기존과 동일하게 동작)</li>
+<li><a href="send-purchase-event.html">구매 이벤트 변경 사항</a></li>
+</ul></li>
+</ul>
 <h2 id='0-8-0' class='heading'>0.8.0</h2>
 <h3 id='주요-변경-사항' class='heading'>주요 변경 사항</h3>
 <h4 id='상품속성-및-이벤트-파라미터-변경' class='heading'>상품속성 및 이벤트 파라미터 변경</h4>

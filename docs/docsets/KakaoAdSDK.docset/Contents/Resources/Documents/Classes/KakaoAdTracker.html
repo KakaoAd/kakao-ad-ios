@@ -369,9 +369,9 @@ trackId 를 설정하지 않을 경우 이벤트 수집은 이루어지지 않�
             <li class="item">
               <div>
                 <code>
-                <a name="/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendPurchaseEventWithTag:totalQuantity:totalPrice:currency:products:"></a>
-                <a name="//apple_ref/swift/Method/sendPurchaseEvent(tag:totalQuantity:totalPrice:currency:products:)" class="dashAnchor"></a>
-                <a class="token" href="#/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendPurchaseEventWithTag:totalQuantity:totalPrice:currency:products:">sendPurchaseEvent(tag:totalQuantity:totalPrice:currency:products:)</a>
+                <a name="/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendPurchaseEventWithTag:totalQuantity:totalPrice:currency:transactionId:products:"></a>
+                <a name="//apple_ref/swift/Method/sendPurchaseEvent(tag:totalQuantity:totalPrice:currency:transactionId:products:)" class="dashAnchor"></a>
+                <a class="token" href="#/c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendPurchaseEventWithTag:totalQuantity:totalPrice:currency:transactionId:products:">sendPurchaseEvent(tag:totalQuantity:totalPrice:currency:transactionId:products:)</a>
                 </code>
               </div>
               <div class="height-container">
@@ -384,6 +384,7 @@ trackId 를 설정하지 않을 경우 이벤트 수집은 이루어지지 않�
 @param totalQuantity 주문에 포함된 상품수
 @param totalPrice 주문 전체 금액
 @param currency 결제 금액 통화 (ISO4217 포맷)
+@param transactionId 주문번호와 같이, 구매에 대한 유니크한 단위 ID
 @param products KakaoAdDetailProduct 클래스 객체의 Array 타입을 입력 받습니다. 개별 주문 상품 상세 정보의 리스트 입니다.</p>
 
                   </div>
@@ -392,7 +393,7 @@ trackId 를 설정하지 않을 경우 이벤트 수집은 이루어지지 않�
                     <div class="language">
                       <p class="aside-title">Swift</p>
                       <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sendPurchaseEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">totalQuantity</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">totalPrice</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/KakaoAdDetailProduct.html">KakaoAdDetailProduct</a></span><span class="p">])</span></code></pre>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sendPurchaseEvent</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">totalQuantity</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">totalPrice</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">transactionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/KakaoAdDetailProduct.html">KakaoAdDetailProduct</a></span><span class="p">])</span></code></pre>
 
                     </div>
                   </div>

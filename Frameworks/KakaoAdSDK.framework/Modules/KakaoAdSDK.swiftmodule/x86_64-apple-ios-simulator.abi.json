@@ -276,38 +276,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -318,10 +290,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -332,10 +318,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -420,38 +420,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -462,10 +434,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -476,10 +462,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -902,7 +902,7 @@
           {
             "kind": "Function",
             "name": "sendPurchaseEvent",
-            "printedName": "sendPurchaseEvent(tag:totalQuantity:totalPrice:currency:products:)",
+            "printedName": "sendPurchaseEvent(tag:totalQuantity:totalPrice:currency:transactionId:products:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -951,6 +951,20 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Array",
                 "printedName": "[KakaoAdSDK.KakaoAdDetailProduct]",
                 "children": [
@@ -965,11 +979,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendPurchaseEventWithTag:totalQuantity:totalPrice:currency:products:",
-            "mangledName": "$s10KakaoAdSDK0aB7TrackerC17sendPurchaseEvent3tag13totalQuantity0I5Price8currency8productsySSSg_SiSdAJSayAA0aB13DetailProductCGtFZ",
+            "usr": "c:@M@KakaoAdSDK@objc(cs)KakaoAdTracker(cm)sendPurchaseEventWithTag:totalQuantity:totalPrice:currency:transactionId:products:",
+            "mangledName": "$s10KakaoAdSDK0aB7TrackerC17sendPurchaseEvent3tag13totalQuantity0I5Price8currency13transactionId8productsySSSg_SiSdA2KSayAA0aB13DetailProductCGtFZ",
             "moduleName": "KakaoAdSDK",
             "static": true,
-            "objc_name": "sendPurchaseEventWithTag:totalQuantity:totalPrice:currency:products:",
+            "objc_name": "sendPurchaseEventWithTag:totalQuantity:totalPrice:currency:transactionId:products:",
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -1500,38 +1514,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -1542,10 +1528,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -1556,10 +1556,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -2982,12 +2996,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(KakaoAdSDK.KCEvent.Type) -> (Swift.String?, Swift.Int?, Swift.Double?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
+                "printedName": "(KakaoAdSDK.KCEvent.Type) -> (Swift.String?, Swift.Int?, Swift.Double?, Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.String?, Swift.Int?, Swift.Double?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
+                    "printedName": "(Swift.String?, Swift.Int?, Swift.Double?, Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -2998,7 +3012,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)",
+                        "printedName": "(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, transactionId: Swift.String?, products: [[Swift.String : Swift.String]]?)",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -3038,6 +3052,20 @@
                                 "name": "Double",
                                 "printedName": "Swift.Double",
                                 "usr": "s:Sd"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
                               }
                             ],
                             "usr": "s:Sq"
@@ -3113,8 +3141,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:10KakaoAdSDK7KCEventO8purchaseyACSSSg_SiSgSdSgAESaySDyS2SGGSgtcACmF",
-            "mangledName": "$s10KakaoAdSDK7KCEventO8purchaseyACSSSg_SiSgSdSgAESaySDyS2SGGSgtcACmF",
+            "usr": "s:10KakaoAdSDK7KCEventO8purchaseyACSSSg_SiSgSdSgA2ESaySDyS2SGGSgtcACmF",
+            "mangledName": "$s10KakaoAdSDK7KCEventO8purchaseyACSSSg_SiSgSdSgA2ESaySDyS2SGGSgtcACmF",
             "moduleName": "KakaoAdSDK",
             "declAttributes": [
               "RawDocComment"
@@ -3128,12 +3156,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(KakaoAdSDK.KCEvent.Type) -> (Swift.String?, Swift.Int?, Swift.Double?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
+                "printedName": "(KakaoAdSDK.KCEvent.Type) -> (Swift.String?, Swift.Int?, Swift.Double?, Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.String?, Swift.Int?, Swift.Double?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
+                    "printedName": "(Swift.String?, Swift.Int?, Swift.Double?, Swift.String?, Swift.String?, [[Swift.String : Swift.String]]?) -> KakaoAdSDK.KCEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -3144,7 +3172,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, products: [[Swift.String : Swift.String]]?)",
+                        "printedName": "(tag: Swift.String?, totalQuantity: Swift.Int?, totalPrice: Swift.Double?, currency: Swift.String?, transactionId: Swift.String?, products: [[Swift.String : Swift.String]]?)",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -3184,6 +3212,20 @@
                                 "name": "Double",
                                 "printedName": "Swift.Double",
                                 "usr": "s:Sd"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
                               }
                             ],
                             "usr": "s:Sq"
@@ -3259,8 +3301,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:10KakaoAdSDK7KCEventO13inAppPurchaseyACSSSg_SiSgSdSgAESaySDyS2SGGSgtcACmF",
-            "mangledName": "$s10KakaoAdSDK7KCEventO13inAppPurchaseyACSSSg_SiSgSdSgAESaySDyS2SGGSgtcACmF",
+            "usr": "s:10KakaoAdSDK7KCEventO13inAppPurchaseyACSSSg_SiSgSdSgA2ESaySDyS2SGGSgtcACmF",
+            "mangledName": "$s10KakaoAdSDK7KCEventO13inAppPurchaseyACSSSg_SiSgSdSgA2ESaySDyS2SGGSgtcACmF",
             "moduleName": "KakaoAdSDK",
             "declAttributes": [
               "RawDocComment"
@@ -3467,38 +3509,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -3509,10 +3523,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -3523,10 +3551,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       }
