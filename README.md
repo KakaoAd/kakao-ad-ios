@@ -23,7 +23,7 @@
 
 ## API Doc
 
- - [https://kakaoad.github.io/kakao-ad-ios/](https://kakaoad.github.io/kakao-ad-ios/)
+ - [https://kakaoad.github.io/kakao-ad-ios/documentation/kakaoadsdk/](https://kakaoad.github.io/kakao-ad-ios/documentation/kakaoadsdk/)
     위 사이트에서 확인 할 수 있습니다. 
 
 ## 지원환경 
