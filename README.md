@@ -33,12 +33,12 @@
 
 ## 지원환경 
 * [최신 버전의 Xcode](https://developer.apple.com/xcode/)
-* iOS Deployment Target: iOS 11.0 이상
+* iOS Deployment Target: iOS 15.0 이상
 * SPM 지원 (https://github.com/KakaoAd/KakaoAdPackage.git)
 
 ## License
 
-Copyright 2018 © Kakao Corp. All Rights Reserved.
+Copyright 2026 © Kakao Corp. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
