@@ -2,6 +2,11 @@
 
 > 이 [가이드](https://kakaoad.github.io/kakao-ad-ios/documentation/kakaoadsdk/)는 iOS Application 에 이벤트 수집을 위한 가이드를 제공하고 있습니다.
 
+## 이벤트 전송 도메인 변경 — 2026년 12월 31일 기존 도메인 지원 종료
+- 이벤트 전송 서버 도메인이 변경되었습니다.
+- 기존 도메인은 2026년 12월 31일까지 지원되며, 이후에는 이벤트가 정상적으로 수집되지 않을 수 있습니다.
+- 이벤트 유실을 막으려면 기한 전에 **0.9.0 이상 버전으로 반드시 업데이트**해 주세요.
+
 ## Xcode 15, First Party API 사용 사유 명시
 - AdFit SDK 0.7.6 버전부터 Swift 5.9(xcode 15)를 지원하며, xcode 15를 이용하시길 바랍니다.
 - AdFit SDK 0.7.6 버전부터 First Party API 사용 사유가 명시되었습니다. 
