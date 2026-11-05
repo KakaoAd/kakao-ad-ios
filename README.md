@@ -8,6 +8,11 @@
     - AdFit SDK 0.7.7 버전에 privacyInfo 항목이 수정되었습니다.
 - 자세한 내용은 [애플 공식 문서](https://developer.apple.com/kr/news/?id=z6fu1dcu&mibextid=S66gvF) 를 참고 부탁드립니다.
 
+## 최소 지원 iOS 배포 타깃 상향 안내 (iOS 15.0)
+- 애플의 빌드 정책(최신 Xcode의 최소 배포 타깃 요구)으로 인하여, 앞으로 배포되는 SDK 버전부터는 부득이하게 최소 지원 iOS 배포 타깃을 iOS 15.0 으로 상향합니다.
+- 이미 배포된 버전의 최소 지원 iOS(11.0)에는 영향이 없습니다.
+- 자세한 내용은 애플 공식 [SDK and system requirements](https://developer.apple.com/xcode/system-requirements/) 문서를 참고 부탁드립니다. (Xcode 27 기준 Deployment Targets: iOS 15–27)
+
 # KakaoSDK 0.7.1 버전부터 최소지원 iOS 버전이 11.0으로 상향되었습니다.  
 
 ## 소개
